@@ -89,28 +89,24 @@ body {
     font-family: "Source Sans Pro", sans-serif;
 }
 
+
+/* responsive */
+
 @media (max-width: 991px) {
     html,
     body {
         overflow-x: hidden;
     }
-    .mobile-top-fix {
-        margin-top: 30px;
-        margin-bottom: 0px;
-    }
-    .mobile-bottom-fix {
-        margin-bottom: 30px;
-    }
-    .mobile-bottom-fix-big {
-        margin-bottom: 60px;
-    }
 }
+
+
+/* / end*/
 
 a.main-button-slider {
     font-size: 18px;
-    border-radius: 20px;
+    border-radius: 6px;
     padding: 12px 20px;
-    background-color: #f55858;
+    background-color: #3d0b5f;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.25px;
@@ -118,14 +114,14 @@ a.main-button-slider {
 }
 
 a.main-button-slider:hover {
-    background-color: #0088e8;
+    background-color: #442f91;
 }
 
 a.main-button {
     font-size: 16px;
     border-radius: 20px;
     padding: 12px 20px;
-    background-color: #00b4c6;
+    background-color: #3814b9;
     text-transform: uppercase;
     color: #fff;
     letter-spacing: 0.25px;
@@ -199,8 +195,11 @@ a.main-button:hover {
 }
 
 .header-area .main-nav .nav li:hover a {
-    color: #f55858;
+    color: #a7a5aa;
 }
+
+
+/* menu responsive */
 
 .header-area .main-nav .menu-trigger {
     cursor: pointer;
@@ -285,8 +284,14 @@ a.main-button:hover {
 }
 
 .header-area.header-sticky .nav li a.active {
-    color: #f55858;
+    color: #a7a5aa;
 }
+
+
+/* / menu responsive */
+
+
+/* header responsive */
 
 @media (max-width: 1200px) {
     .header-area .main-nav .nav li {
@@ -355,6 +360,9 @@ a.main-button:hover {
 }
 
 
+/* / header responsive */
+
+
 /* HOME */
 
 #home {
@@ -401,6 +409,9 @@ a.main-button:hover {
     margin-bottom: 40px;
     position: relative;
 }
+
+
+/* home responsive */
 
 @media (max-width: 991px) {
     .home-area .header-text {
@@ -472,6 +483,9 @@ a.main-button:hover {
 }
 
 
+/* / home responsive */
+
+
 /* SERVICES */
 
 #services {
@@ -522,7 +536,7 @@ a.main-button:hover {
     position: relative;
     padding: 120px 0px 90px 0px;
     background: rgb(62, 0, 232);
-    background: linear-gradient( 135deg, rgb(101, 0, 232) 0%, rgba(0, 182, 198, 1) 0%, rgb(55, 5, 238) 100%);
+    background: linear-gradient( 135deg, rgb(101, 0, 232) 0%, rgb(51, 111, 201) 0%, rgb(55, 5, 238) 100%);
 }
 
 .about-item {

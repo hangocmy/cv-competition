@@ -1,4 +1,7 @@
-/*! Scroll Reveal Animations */
+/*
+Sử dụng thư viện Scroll Reveal Animations 
+Nguồn: https://github.com/jlmakes/scrollreveal
+*/
 window.scrollReveal = function(t) {
     "use strict";
 
@@ -100,6 +103,8 @@ window.scrollReveal = function(t) {
         extend: function(t, e) { for (var i in e) e.hasOwnProperty(i) && (t[i] = e[i]); return t }
     }, e
 }(window);
+/* /end */
+
 /*-----------------*/
 (function($) {
     "use strict";
