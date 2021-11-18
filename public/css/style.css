@@ -723,15 +723,15 @@ CV PAGE
 */
 
 .cv {
-    padding: 100px 100px;
+    padding: 30px 40px;
 }
 
-.header-cv {
+/* .header-cv {
     padding-top: 200px;
     padding-bottom: 10rem;
     direction: ltr;
     margin-bottom: 3rem;
-}
+} */
 
 .head-line {
     width: 5px;
@@ -755,7 +755,7 @@ CV PAGE
 
 .lastName {
     font-weight: bold;
-    font-size: 50px;
+    font-size: 25px;
     text-transform: uppercase;
     word-break: break-all;
     color: #3e3e3e;
@@ -779,10 +779,7 @@ CV PAGE
     font-size: 24px;
 }
 
-.photo {
-    width: 300px;
-    height: 300px;
-}
+
 
 .middle-line {
     width: 4px;
@@ -793,19 +790,14 @@ CV PAGE
 }
 
 .icon {
-    width: 70px;
-    height: 70px;
-    font-size: 30px;
-    color: white;
-    background-color: #3e3e3e;
-    border-radius: 50%;
-    padding: 10px;
+    font-size: 15px;
+    color: #a5dfe5;
 }
 
 .list-item {
-    padding-top: 8px;
+    padding-top: 20px;
     padding-bottom: 8px;
-    margin-right: 8px;
+    margin-right: 20px;
 }
 
 .list-item:not(:last-child) {
@@ -819,20 +811,19 @@ CV PAGE
 .title {
     width: 100%;
     font-weight: bold;
-    font-size: 32px;
+    font-size: 17px;
     text-transform: uppercase;
-    line-height: 80px;
+    line-height: 40px;
     border-bottom: 1px solid #231f20;
     padding-top: 0px;
-    padding-bottom: 10px;
     color: #222121;
     letter-spacing: 10px;
     margin-bottom: 8px;
 }
 
-.personal-details .title {
-    padding-top: 16px;
-}
+/* .personal-details .title {
+    padding-top: 56px;
+} */
 
 .bullet {
     position: relative;
@@ -921,16 +912,8 @@ CV PAGE
 @media print {
     @page {
         size: A4;
-        margin: 0mm !important;
-    }
-    html {
-        font-size: 24%;
-    }
-    .header {
-        padding-top: 12rem;
-        padding-bottom: 9rem;
-    }
-    ul li {
-        margin-left: 1rem;
-    }
+    } 
+    body {
+        zoom: 60%;
+      }   
 }
