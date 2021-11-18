@@ -366,6 +366,13 @@ a.main-button:hover {
 /* / header responsive */
 
 
+/*
+============================================
+HOME PAGE
+============================================
+*/
+
+
 /* HOME */
 
 #home {
@@ -710,9 +717,9 @@ footer .copyright {
 
 
 /*
-===============
-CV
-===============
+===========================================
+CV PAGE
+===========================================
 */
 
 .cv {
@@ -786,41 +793,45 @@ CV
 }
 
 .icon {
-    width: 5rem;
-    height: 5rem;
-    font-size: 100px;
+    width: 70px;
+    height: 70px;
+    font-size: 30px;
     color: white;
     background-color: #3e3e3e;
     border-radius: 50%;
-    padding: 0.7rem;
+    padding: 10px;
 }
 
 .list-item {
-    padding-top: 2.03123rem;
-    padding-bottom: 2.03123rem;
-    margin-right: 1rem;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-right: 8px;
 }
 
 .list-item:not(:last-child) {
-    border-bottom: 0.225693rem solid #231f20;
+    border-bottom: 3px solid #231f20;
+}
+
+.list-item p {
+    font-size: 20px;
 }
 
 .title {
     width: 100%;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 32px;
     text-transform: uppercase;
-    line-height: 4.5rem;
+    line-height: 80px;
     border-bottom: 1px solid #231f20;
-    padding-top: 0rem;
-    padding-bottom: 3.8rem;
+    padding-top: 0px;
+    padding-bottom: 10px;
     color: #222121;
-    letter-spacing: 1.01562rem;
-    margin-bottom: 1.8rem;
+    letter-spacing: 10px;
+    margin-bottom: 8px;
 }
 
 .personal-details .title {
-    padding-top: 4rem;
+    padding-top: 16px;
 }
 
 .bullet {
@@ -828,44 +839,58 @@ CV
 }
 
 .bullet i {
-    font-size: 2.6rem;
+    font-size: 38px;
 }
 
 .bullet:before {
     content: "";
     position: absolute;
-    left: 1.9rem;
+    left: 28px;
     width: 0.3rem;
-    height: 70%;
+    height: 60%;
     background-color: #292929;
-    margin-top: 4.2rem;
+    margin-top: 60px;
 }
 
 .record {
-    padding-top: 2rem;
+    padding-top: 16px;
 }
 
 .record p {
     width: 100%;
-    font-size: 28px;
-    line-height: 1.33;
+    font-size: 24px;
+    line-height: 26px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
     color: #666766;
     word-break: break-word;
     display: block;
 }
 
-.pb-2 li {
-    font-family: Raleway;
-    line-height: 5px;
-    font-size: 2.8806rem;
+.pb-2 {
+    line-height: 40px;
+    font-size: 24px;
     color: #7b7b7b;
 }
 
 .record span {
     color: #666766;
-    font-size: 2.28048rem;
-    line-height: 1.2;
-    letter-spacing: 0.5rem;
+    font-size: 22px;
+    line-height: 70px;
+}
+
+.record-link {
+    padding-top: 16px;
+}
+
+.record-link p {
+    width: 100%;
+    font-size: 24px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+    word-spacing: 2px;
+    color: #666766;
+    word-break: break-word;
 }
 
 .btn-group-fab {
@@ -888,8 +913,8 @@ CV
     border-radius: 50%;
     display: block;
     margin-bottom: 4px;
-    width: 40px;
-    height: 40px;
+    width: 60px;
+    height: 60px;
     margin: 4px auto;
 }
 
