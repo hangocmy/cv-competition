@@ -759,14 +759,13 @@ CV PAGE
     text-transform: uppercase;
     word-break: break-all;
     color: #3e3e3e;
-    line-height: 80px;
-    letter-spacing: 16px;
-    direction: ltr;
+    padding-left: 50px;
+
 }
 
 .jobTitle {
-    padding-right: 0px;
-    margin-top: 30px;
+    padding-left: 50px;
+    margin-top: 10px;
     color: #292929;
 }
 
@@ -838,8 +837,8 @@ CV PAGE
     position: absolute;
     left: 28px;
     width: 0.3rem;
-    height: 60%;
-    background-color: #292929;
+    height: 70%;
+    background-color: #a5dfe5;
     margin-top: 60px;
 }
 
@@ -884,6 +883,56 @@ CV PAGE
     word-break: break-word;
 }
 
+.btn-group-edit{
+    position: fixed;
+    width: 50px;
+    height: auto;
+    right: 20px;
+    bottom: 180px;
+}
+
+.btn-group-edit div{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.btn-group-edit .btn {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 4px;
+    width: 60px;
+    height: 60px;
+    margin: 4px auto;
+}
+
+.btn-group-back{
+    position: fixed;
+    width: 50px;
+    height: auto;
+    right: 20px;
+    bottom: 100px;
+}
+
+.btn-group-back div{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.btn-group-back .btn {
+    position: absolute;
+    bottom: 0;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 4px;
+    width: 60px;
+    height: 60px;
+    margin: 4px auto;
+}
+
 .btn-group-fab {
     position: fixed;
     width: 50px;
@@ -915,5 +964,6 @@ CV PAGE
     } 
     body {
         zoom: 60%;
-      }   
+    }   
+    body {-webkit-print-color-adjust: exact;}
 }

@@ -69,13 +69,13 @@
             </animatable-component> -->
             <div class="row">
 
-                <div class="col-4" align="center">
+                <div class="col-4 p-4" align="center" style="background-color: #a5dfe5">
                     <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
                         <img src="./images/avatar.png" width="35%" class="border border-2 border-dark rounded-circle img-thumbnail">
                     </animatable-component>
                 </div>
 
-                <div class="col-7">
+                <div class="col-8">
                     
                     <animatable-component autoplay animation="fadeInDown" easing="ease-in-out" duration="1200">
                         <h4 class="lastName ">
@@ -100,21 +100,32 @@
         
         <section class="content ">
             <div class="row">
-                <div class="col-4">
+                <div class="col-4" style="background-color: #a5dfe5">
 
                     <!-- Thong tin ca nhan -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                         <div class="card shadow p-3 mb-5 bg-white rounded ">                   
                             <div class="card-body">
                               <p class="card-text">
-                                <p class="title">CONTACT</p>
-                                <!-- Địa chỉ -->
+                                <!-- <p class="title">CONTACT</p> -->
+                                
+                                <!-- Giới tính -->
                                 <div class="row">
                                     <div class="col-2 icon">
-                                        <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+                                        <i class="bi bi-person-fill" role="img" aria-label="Location"></i>
                                     </div>
                                     <div class="col-10">
-                                        <p style="font-size: 15px;">District 7, Ho Chi Minh City</p>
+                                        <p style="font-size: 15px;">Nam</p>
+                                    </div>
+                                </div>
+
+                                <!-- Ngày sinh -->
+                                <div class="row">
+                                    <div class="col-2 icon">
+                                        <i class="bi bi-calendar-check-fill" role="img" aria-label="Location"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <p style="font-size: 15px;">01/01/1990</p>
                                     </div>
                                 </div>
     
@@ -128,6 +139,16 @@
                                     </div>
                                 </div>
     
+                                <!-- Địa chỉ -->
+                                <div class="row">
+                                    <div class="col-2 icon">
+                                        <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+                                    </div>
+                                    <div class="col-10">
+                                        <p style="font-size: 15px;">District 7, Ho Chi Minh City</p>
+                                    </div>
+                                </div>
+                                
                                  <!-- Email -->
                                  <div class="row pt-2">
                                     <div class="col-2 icon">
@@ -141,7 +162,7 @@
                                 <!-- Link -->
                                 <div class="row pt-2">
                                     <div class="col-2 icon">
-                                        <i class="bi bi-github" role="img" aria-label="GitHub"></i>
+                                        <i class="bi bi-link" role="img" aria-label="GitHub"></i>
                                     </div>
                                     <div class="col-10">
                                         <span style="font-size: 15px;">github.com/mandarin</span>
@@ -153,163 +174,235 @@
                         </div>
                     </animatable-component>
                     
-                    
-                      <!-- Học vấn -->          
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p class="title">Education</p>
-                        </div>
-                    </div>
-                    <div class="row record" v-for="e in education">
-                        <div class="col-auto bullet">
-                            <i class="bi bi-record-circle"></i>
-                        </div>
-                        <div class="col" style="white-space: pre-line;">
-                            <p class="fw-bold text-uppercase">
-                                Ton Duc Thang University
-                            </p>
-                            <p>Software Engineering</p>
-                        </div>
-                    </div>
-                    <!-- Links -->
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p class="title">Links</p>
-                        </div>
-                    </div>
-                    <div class="row record-link">
-                        <div class="col-auto bullet">
-                            <i class="bi bi-record-circle"></i>
-                        </div>
-                        <div class="col" style="white-space: pre-line;">
-                            <p>
-                                GitHub:
-                                <a class="text-reset text-decoration-underline" target="_blank" href="https://github.com">
-                                    https://github.com/thachluuhoanga
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row record-link">
-                        <div class="col-auto bullet">
-                            <i class="bi bi-record-circle"></i>
-                        </div>
-                        <div class="col" style="white-space: pre-line;">
-                            <p>
-                                LinkedIn:
-                                <a class="text-reset text-decoration-underline" target="_blank" href="https://www.linkedin.com">
-                                    https://www.linkedin.com/in/nguyenvana
-                                </a>
-                            </p>
-                        </div>
-                    </div>
-                    <!-- Skills -->
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p class="title">Skills</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
+                    <!-- SKILL -->
+                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
+                        <div class="card-body">
+                          <p class="card-text">
+                            <p class="title">Skills</p>                            
                             <ul class="ms-2">
-                                <li class="pb-2">
-                                    Word, Excel, PHP, MySQL, HTML, CSS, Javascript, Angular, NodeJs
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p><b>Tin học</b></p>
+                                    <p>Sử dụng tốt Word, Excel,...</p>
+                                </li>
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p><b>Ngôn ngữ</b></p>
+                                    <p>Sử dụng thành thạo tiếng Việt giao tiếp.</p>
+                                </li>
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p><b>Kỹ năng quản lý thời gian</b></p>
+                                    <p>Có thể quản lý thời gian hiệu quả.</p>
+                                </li>
+
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p><b>Certificate</b></p>
+                                    <p>MOS 1, MOS 2, NETACAD,...</p>
                                 </li>
                             </ul>
+                          </p>
                         </div>
                     </div>
-                    <!-- Language -->
-                    <div class="row mt-5">
-                        <div class="col">
-                            <p class="title">Languages</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col">
+
+                    <!-- Hobby -->
+                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
+                        <div class="card-body">
+                          <p class="card-text">
+                            <p class="title">Hobby</p>                            
                             <ul class="ms-2">
-                                <li class="pb-2">
-                                    English, French
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p>Badminton, Read, Sleep,...</p>
                                 </li>
                             </ul>
+                          </p>
+                        </div>
+                    </div>
+
+                    <!-- Goal -->
+                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
+                        <div class="card-body">
+                        <p class="card-text">
+                            <p class="title">Goal</p>                            
+                            <ul class="ms-2">
+                                <li class="pb-2" style="font-size: 15px;">
+                                    <p>Collaborated with the p on teaching methodn-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation</p>
+                                </li>
+                            </ul>
+                        </p>
                         </div>
                     </div>
                 </div>
 
                 <!-- NEW COL -->
-                <div class="col col-8">
+                <div class="col col-8" style="padding-left: 30px;">
+
                     <!-- About me -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                        <div class="row bullet">
-                            <div class="col-auto pt-2">
-                                <i class="bi bi-circle-fill"></i>
-                            </div>
-                            <div class="col">
-                                <p class="title">About Me</p>
-                            </div>
+                        <div class="col">
+                            <p class="title" >About Me</p>
                         </div>
                     </animatable-component>
                     <!-- Content - About me -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                         <div class="row record bullet">
                             <div class="col-auto">
-                                <i class="bi bi-record-circle"></i>
+                                <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
                             </div>
                             <div class="col">
-                                <p style="white-space: pre-line;">
+                                <p style="white-space: pre-line; font-size: 15px;">
                                     I am a Front End Developer | Working on projects that integrate @KinEcosystem | + 3 years of experience in maintenance Electromechanical | Since 2019 learning software development | experience in HTML, CSS and Angular.
                                 </p>
                             </div>
                         </div>
                     </animatable-component>
+
+                    
+                      <!-- Học vấn -->          
+                      <div class="row mt-5">
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="col">
+                                <p class="title" >EDUCATION</p>
+                            </div>
+                        </animatable-component>
+                    <!-- Content - Học vấn -->
+                    <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                        <div class="row bullet">
+                            <div class="col-auto ">
+                                <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>Bachelor of Laws</b>
+                                    </p>
+                                    <p>OPEN UNIVERSITY HCMC</p>
+                                    <p>2018-2022</p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>Bachelor of Software Engineering</b>
+                                    </p>
+                                    <p>TON DUC THANG UNIVERSITY</p>
+                                    <p>2018-2022</p>
+                                </div>
+
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>Bachelor of Software Engineering</b>
+                                    </p>
+                                    <p>TON DUC THANG UNIVERSITY</p>
+                                    <p>2018-2022</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </animatable-component>
+                      </div>
+                 
+
                     <!-- Work Experience -->
                     <div class="row mt-5">
-                        <div class="col-auto bullet pt-2">
-                            <i class="bi bi-circle-fill"></i>
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="col">
+                                <p class="title">WORK EXPERIENCE</p>
+                            </div>
+                        </animatable-component>
+                    <!-- Content - About me -->
+                    <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                        <div class="row bullet">
+                            <div class="col-auto ">
+                                <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                            </div>
+                            <div class="col">
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>VNG Corporation, Ho Chi Minh City</b>
+                                    </p>
+                                    <p>
+                                        Front-end Developer
+                                    </p>
+                                    
+                                    <span>&nbsp;|&nbsp;2018 - 2019</span>
+
+                                    <p class="fw-bold position-relative pt-3">
+                                        Achievement
+                                    </p>
+                                    <p class="mb-0">
+                                        Collaborated with the development team of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
+                                    </p>
+                                </div>
+                                <hr>    
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>GAMELOFT, Ho Chi Minh City</b>
+                                    </p>
+                                    <p>
+                                        Front-end Developer
+                                    </p>
+                                    
+                                    <span>&nbsp;|&nbsp;2020 - Now</span>
+
+                                    <p class="fw-bold position-relative pt-3">
+                                        Achievement
+                                    </p>
+                                    <p class="mb-0">
+                                        area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
+                                    </p>
+                                </div>
+                                <hr> 
+                                <div class="row">
+                                    <p style="white-space: pre-line; font-size: 15px;">
+                                        <b>GAMELOFT, Ho Chi Minh City</b>
+                                    </p>
+                                    <p>
+                                        Front-end Developer
+                                    </p>
+                                    
+                                    <span>&nbsp;|&nbsp;2020 - Now</span>
+
+                                    <p class="fw-bold position-relative pt-3">
+                                        Achievement
+                                    </p>
+                                    <p class="mb-0">
+                                        area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
+                                    </p>
+                                </div>
+                                <hr> 
+                            </div>
                         </div>
-                        <div class="col">
-                            <p class="title">Work Experience</p>
-                        </div>
-                    </div>
-                    <!-- Content - Work Experience -->
-                    <div class="row record mb-4 bullet">
-                        <div class="col-auto">
-                            <i class="bi bi-record-circle"></i>
-                        </div>
-                        <div class="col">
-                            <p class="text-uppercase fw-bold position-relative">
-                                Front-end Developer
-                                <span>&nbsp;|&nbsp;2018 - Now</span>
-                            </p>
-                            <p class="fst-italic">
-                                VNG Corporation, Ho Chi Minh City
-                            </p>
-                        </div>
-                    </div>
-                    <div class="row record mb-4 bullet">
-                        <div class="col-auto">
-                            <i class="bi bi-record-circle"></i>
-                        </div>
-                        <div class="col">
-                            <p class="text-uppercase fw-bold position-relative">
-                                Achievement
-                            </p>
-                            <p class="mb-0">
-                                • Collaborated with the development team to implement improvements in the web portal of foundation, I collaborated with the development team to implement improvements in the application portal of foundation ,I did research on teaching methodologies, helping
-                                in the decision-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
-                            </p>
-                        </div>
-                    </div>
+                    </animatable-component>
+                      </div>
+
+                   
 
                 </div>
             </div>
         </section>
     </section>
+
     <!-- button print -->
     <div class="btn-group-fab d-print-none">
         <div>
             <button onclick="window.print()" type="button" class="btn btn-main btn-primary" title="Print">
             <i class="bi bi-printer fs-3"></i>
             </button>
+        </div>
+    </div>
+
+    <!-- button Back  -->
+    <div class="btn-group-back d-print-none">
+        <div>
+            <button onclick="location.href='/'" type="button" class="btn btn-main btn-success" title="Back">
+                <i class="bi bi-box-arrow-left fs-3"></i></button>
+            
+        </div>
+    </div>
+
+    <!-- button Back  -->
+    <div class="btn-group-edit d-print-none">
+        <div>
+            <button onclick="alert('edit')" type="button" class="btn btn-main btn-warning" title="Back">
+                <i class="bi bi-pencil-square fs-3"></i></button>
+            
         </div>
     </div>
     <!-- / cv -->
