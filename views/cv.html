@@ -22,68 +22,24 @@
 </head>
 
 <body>
-    <!-- Header 
-    <header class="header-area header-sticky">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <a href="/" class="logo">MANDARI CV</a>
-                        <ul class="nav">
-                            <li class="scroll-to-section"><a href="/">Home</a></li>
-                            <li class="scroll-to-section"><a href="/#services">Services</a></li>
-                            <li class="scroll-to-section"><a href="/#about">About</a></li>
-                            <li class="scroll-to-section"><a href="/" class="active">Create CV</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                    </nav>
-                </div>
-            </div>
-        </div>
-    </header>
-    -->
-
-
-    <!-- Banner 
-    <div class="home-area" id="home-cv">
-        <div class="header-text">
-            <div class="container">
-                <div class="row">
-                    <div class="text-center col-lg-12 col-md-12 col-sm-12 col-xs-12" data-scroll-reveal="enter left move 30px over 0.6s after 0.4s">
-                        <h1>Professional CV for<strong> YOU</strong></h1>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    -->
-
-
-    <!-- cv -->
     <section class="cv container">
         <header>
-            <!-- <animatable-component autoplay animation="fadeInDownBig" easing="ease-in-out" duration="1200">
-                <div class="head-line position-absolute"></div>
-            </animatable-component> -->
             <div class="row">
-
-                <div class="col-4 p-4" align="center" style="background-color: #a5dfe5">
+                <!-- Avatar -->
+                <div class="col-4 p-4 card-background text-center">
                     <animatable-component autoplay animation="rotateIn" easing="ease-in" duration="1200">
                         <img src="./images/avatar.png" width="35%" class="border border-2 border-dark rounded-circle img-thumbnail">
                     </animatable-component>
                 </div>
-
+                <!-- Họ tên & Job -->
                 <div class="col-8">
-                    
-                    <animatable-component autoplay animation="fadeInDown" easing="ease-in-out" duration="1200">
-                        <h4 class="lastName ">
+                    <animatable-component autoplay animation="slideInUp" easing="ease-in-out" duration="1000">
+                        <h4 class="lastName">
                             MANDARIN
                         </h4>
                         <hr>
                     </animatable-component>
-                    <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
+                    <animatable-component autoplay animation="lightSpeedIn" easing="ease-in-out" duration="1800">
                         <p class="jobTitle">
                             <span class="text-break">
                                 FRONTEND INTERN
@@ -91,213 +47,206 @@
                         </p>
                     </animatable-component>
                 </div>
-               
             </div>
-            <!-- <animatable-component autoplay animation="fadeInUpBig" easing="ease-in-out" duration="1200">
-                <div class="middle-line position-absolute"></div>
-            </animatable-component> -->
         </header>
-        
-        <section class="content ">
+
+        <section class="content">
             <div class="row">
-                <div class="col-4" style="background-color: #a5dfe5">
-
-                    <!-- Thong tin ca nhan -->
+                <!-- CONTENT - LEFT -->
+                <div class="col-4 card-background">
+                    <!-- Card - Thông tin cá nhân -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                        <div class="card shadow p-3 mb-5 bg-white rounded ">                   
+                        <div class="card shadow p-3 mb-5 bg-white rounded ">
                             <div class="card-body">
-                              <p class="card-text">
-                                <!-- <p class="title">CONTACT</p> -->
-                                
-                                <!-- Giới tính -->
-                                <div class="row">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-person-fill" role="img" aria-label="Location"></i>
+                                <p class="card-text">
+                                    <!-- Giới tính -->
+                                    <div class="row">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-person-fill" role="img" aria-label="Location"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">Nam</p>
+                                        </div>
                                     </div>
-                                    <div class="col-10">
-                                        <p style="font-size: 15px;">Nam</p>
+                                    <!-- Ngày sinh -->
+                                    <div class="row pt-2">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-calendar-check-fill" role="img" aria-label="Location"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">01/01/1990</p>
+                                        </div>
                                     </div>
-                                </div>
-
-                                <!-- Ngày sinh -->
-                                <div class="row">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-calendar-check-fill" role="img" aria-label="Location"></i>
+                                    <!-- Số điện thoại -->
+                                    <div class="row pt-2">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">0123456789</p>
+                                        </div>
                                     </div>
-                                    <div class="col-10">
-                                        <p style="font-size: 15px;">01/01/1990</p>
+                                    <!-- Địa chỉ -->
+                                    <div class="row pt-2">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">District 7, Ho Chi Minh City</p>
+                                        </div>
                                     </div>
-                                </div>
-    
-                                <!-- Số điện thoại -->
-                                <div class="row pt-2">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
+                                    <!-- Email -->
+                                    <div class="row pt-2">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">mandarin@gmail.com</p>
+                                        </div>
                                     </div>
-                                    <div class="col-10">
-                                        <span style="font-size: 15px;">0123456789</span>
+                                    <!-- Link -->
+                                    <div class="row pt-2">
+                                        <div class="col-2 icon">
+                                            <i class="bi bi-link" role="img" aria-label="GitHub"></i>
+                                        </div>
+                                        <div class="col-10">
+                                            <p class="h6">github.com/mandarin</p>
+                                        </div>
                                     </div>
-                                </div>
-    
-                                <!-- Địa chỉ -->
-                                <div class="row">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
-                                    </div>
-                                    <div class="col-10">
-                                        <p style="font-size: 15px;">District 7, Ho Chi Minh City</p>
-                                    </div>
-                                </div>
-                                
-                                 <!-- Email -->
-                                 <div class="row pt-2">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
-                                    </div>
-                                    <div class="col-10">
-                                        <span style="font-size: 15px;">mandarin@gmail.com</span>
-                                    </div>
-                                </div>
-    
-                                <!-- Link -->
-                                <div class="row pt-2">
-                                    <div class="col-2 icon">
-                                        <i class="bi bi-link" role="img" aria-label="GitHub"></i>
-                                    </div>
-                                    <div class="col-10">
-                                        <span style="font-size: 15px;">github.com/mandarin</span>
-                                    </div>
-                                </div>
-    
-                              </p>
+                                </p>
                             </div>
                         </div>
                     </animatable-component>
-                    
-                    <!-- SKILL -->
-                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
-                        <div class="card-body">
-                          <p class="card-text">
-                            <p class="title">Skills</p>                            
-                            <ul class="ms-2">
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p><b>Tin học</b></p>
-                                    <p>Sử dụng tốt Word, Excel,...</p>
-                                </li>
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p><b>Ngôn ngữ</b></p>
-                                    <p>Sử dụng thành thạo tiếng Việt giao tiếp.</p>
-                                </li>
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p><b>Kỹ năng quản lý thời gian</b></p>
-                                    <p>Có thể quản lý thời gian hiệu quả.</p>
-                                </li>
+                    <!-- / Card - Thông tin cá nhân -->
 
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p><b>Certificate</b></p>
-                                    <p>MOS 1, MOS 2, NETACAD,...</p>
-                                </li>
-                            </ul>
-                          </p>
+                    <!-- Card - Skills -->
+                    <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
+                        <div class="card shadow p-3 mb-5 bg-white rounded ">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <p class="title">Skills</p>
+                                    <ul class="ms-2">
+                                        <li class="pb-2">
+                                            <p><b>Tin học</b></p>
+                                            <p class="h6">Sử dụng tốt Word, Excel,...</p>
+                                        </li>
+                                        <li class="pb-2">
+                                            <p><b>Ngôn ngữ</b></p>
+                                            <p class="h6">Sử dụng thành thạo tiếng Việt giao tiếp.</p>
+                                        </li>
+                                        <li class="pb-2">
+                                            <p><b>Kỹ năng quản lý thời gian</b></p>
+                                            <p class="h6">Có thể quản lý thời gian hiệu quả.</p>
+                                        </li>
+                                        <li class="pb-2">
+                                            <p><b>Certificate</b></p>
+                                            <p class="h6">MOS 1, MOS 2, NETACAD,...</p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </animatable-component>
+                    <!-- / Card - Skills -->
 
-                    <!-- Hobby -->
-                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
-                        <div class="card-body">
-                          <p class="card-text">
-                            <p class="title">Hobby</p>                            
-                            <ul class="ms-2">
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p>Badminton, Read, Sleep,...</p>
-                                </li>
-                            </ul>
-                          </p>
+                    <!-- Card Hobby -->
+                    <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                        <div class="card shadow p-3 mb-5 bg-white rounded ">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <p class="title">Hobby</p>
+                                    <ul class="ms-2">
+                                        <li class="pb-2" style="font-size: 15px;">
+                                            <p class="h6">Badminton, Read, Sleep,...</p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </animatable-component>
+                    <!-- / Card - Hobby -->
 
-                    <!-- Goal -->
-                    <div class="card shadow p-3 mb-5 bg-white rounded ">                   
-                        <div class="card-body">
-                        <p class="card-text">
-                            <p class="title">Goal</p>                            
-                            <ul class="ms-2">
-                                <li class="pb-2" style="font-size: 15px;">
-                                    <p>Collaborated with the p on teaching methodn-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation</p>
-                                </li>
-                            </ul>
-                        </p>
+                    <!-- Card - Goal -->
+                    <animatable-component autoplay animation="fade-in-left" easing="ease-in-out" duration="1200">
+                        <div class="card shadow p-3 mb-5 bg-white rounded ">
+                            <div class="card-body">
+                                <p class="card-text">
+                                    <p class="title">Goal</p>
+                                    <ul class="ms-2">
+                                        <li class="pb-2">
+                                            <p class="h6" style="letter-spacing: 0.5px;">Collaborated with the p on teaching methodn-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation</p>
+                                        </li>
+                                    </ul>
+                                </p>
+                            </div>
                         </div>
-                    </div>
+                    </animatable-component>
+                    <!-- / Card Goal -->
                 </div>
+                <!-- / CONTENT - LEFT -->
 
-                <!-- NEW COL -->
+
+                <!-- CONTENT - RIGHT -->
                 <div class="col col-8" style="padding-left: 30px;">
-
                     <!-- About me -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                         <div class="col">
-                            <p class="title" >About Me</p>
+                            <p class="title">About Me</p>
                         </div>
                     </animatable-component>
-                    <!-- Content - About me -->
                     <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
                         <div class="row record bullet">
                             <div class="col-auto">
                                 <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
                             </div>
                             <div class="col">
-                                <p style="white-space: pre-line; font-size: 15px;">
+                                <p style="white-space: pre-line;">
                                     I am a Front End Developer | Working on projects that integrate @KinEcosystem | + 3 years of experience in maintenance Electromechanical | Since 2019 learning software development | experience in HTML, CSS and Angular.
                                 </p>
                             </div>
                         </div>
                     </animatable-component>
+                    <!-- / About me -->
 
-                    
-                      <!-- Học vấn -->          
-                      <div class="row mt-5">
+                    <!-- Học vấn -->
+                    <div class="row mt-5">
                         <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                            <div class="col">
-                                <p class="title" >EDUCATION</p>
+                            <div class="col mt-4">
+                                <p class="title">EDUCATION</p>
                             </div>
                         </animatable-component>
-                    <!-- Content - Học vấn -->
-                    <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                        <div class="row bullet">
-                            <div class="col-auto ">
-                                <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="row bullet">
+                                <div class="col-auto ">
+                                    <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                                </div>
+                                <div class="col record">
+                                    <div class="row">
+                                        <p>
+                                            <b>Bachelor of Laws</b>
+                                        </p>
+                                        <p>OPEN UNIVERSITY HCMC</p>
+                                        <p>2018-2022</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                            <b>Bachelor of Software Engineering</b>
+                                        </p>
+                                        <p>TON DUC THANG UNIVERSITY</p>
+                                        <p>2018-2022</p>
+                                    </div>
+                                    <div class="row">
+                                        <p>
+                                            <b>Bachelor of Software Engineering</b>
+                                        </p>
+                                        <p>TON DUC THANG UNIVERSITY</p>
+                                        <p>2018-2022</p>
+                                    </div>
+                                </div>
                             </div>
-                            <div class="col">
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>Bachelor of Laws</b>
-                                    </p>
-                                    <p>OPEN UNIVERSITY HCMC</p>
-                                    <p>2018-2022</p>
-                                </div>
-
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>Bachelor of Software Engineering</b>
-                                    </p>
-                                    <p>TON DUC THANG UNIVERSITY</p>
-                                    <p>2018-2022</p>
-                                </div>
-
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>Bachelor of Software Engineering</b>
-                                    </p>
-                                    <p>TON DUC THANG UNIVERSITY</p>
-                                    <p>2018-2022</p>
-                                </div>
-
-                            </div>
-                        </div>
-                    </animatable-component>
-                      </div>
-                 
+                        </animatable-component>
+                    </div>
+                    <!-- / Học vấn -->
 
                     <!-- Work Experience -->
                     <div class="row mt-5">
@@ -306,80 +255,61 @@
                                 <p class="title">WORK EXPERIENCE</p>
                             </div>
                         </animatable-component>
-                    <!-- Content - About me -->
-                    <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
-                        <div class="row bullet">
-                            <div class="col-auto ">
-                                <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                        <animatable-component autoplay animation="fade-in-right" easing="ease-in-out" duration="1200">
+                            <div class="row bullet">
+                                <div class="col-auto ">
+                                    <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
+                                </div>
+                                <div class="col record">
+                                    <!-- Work 1 -->
+                                    <div class="row">
+                                        <span><b>VNG Corporation, Ho Chi Minh City</b></span>
+                                        <p>Front-end Developer&nbsp;|&nbsp;2018 - 2019</p>
+                                        <p class="position-relative">
+                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> Collaborated with the development team of the educational area of the foundation,I trained volunteers to play their role as mentors
+                                            within the teaching program at the foundation
+                                        </p>
+                                    </div>
+                                    <!-- Work 2 -->
+                                    <hr>
+                                    <div class="row">
+                                        <span><b>GAMELOFT, Ho Chi Minh City</b><span>
+                                        <p>Front-end Developer&nbsp;|&nbsp;2018 - 2019</p>
+                                        <p class="position-relative">
+                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> Area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <!-- Work 3 -->
+                                    <div class="row mt-4">
+                                        <span><b>VNG, Ho Chi Minh City</b><span>
+                                        <p>Front-end Developer&nbsp;|&nbsp;2019 - 2020</p>
+                                        <p class="position-relative">
+                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> I learned about: HTML, CSS, Javascript. I participated in the experience of a real project being conducted.
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <!-- Work TEST -->
+                                    <div class="row mt-4">
+                                        <span><b>VNG, Ho Chi Minh City</b><span>
+                                        <p>Front-end Developer&nbsp;|&nbsp;2019 - 2020</p>
+                                        <p class="position-relative">
+                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> I learned about: HTML, CSS, Javascript. I participated in the experience of a real project being conducted.
+                                        </p>
+                                    </div>
+                                    <hr>                                    
+                                </div>
                             </div>
-                            <div class="col">
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>VNG Corporation, Ho Chi Minh City</b>
-                                    </p>
-                                    <p>
-                                        Front-end Developer
-                                    </p>
-                                    
-                                    <span>&nbsp;|&nbsp;2018 - 2019</span>
-
-                                    <p class="fw-bold position-relative pt-3">
-                                        Achievement
-                                    </p>
-                                    <p class="mb-0">
-                                        Collaborated with the development team of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
-                                    </p>
-                                </div>
-                                <hr>    
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>GAMELOFT, Ho Chi Minh City</b>
-                                    </p>
-                                    <p>
-                                        Front-end Developer
-                                    </p>
-                                    
-                                    <span>&nbsp;|&nbsp;2020 - Now</span>
-
-                                    <p class="fw-bold position-relative pt-3">
-                                        Achievement
-                                    </p>
-                                    <p class="mb-0">
-                                        area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
-                                    </p>
-                                </div>
-                                <hr> 
-                                <div class="row">
-                                    <p style="white-space: pre-line; font-size: 15px;">
-                                        <b>GAMELOFT, Ho Chi Minh City</b>
-                                    </p>
-                                    <p>
-                                        Front-end Developer
-                                    </p>
-                                    
-                                    <span>&nbsp;|&nbsp;2020 - Now</span>
-
-                                    <p class="fw-bold position-relative pt-3">
-                                        Achievement
-                                    </p>
-                                    <p class="mb-0">
-                                        area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
-                                    </p>
-                                </div>
-                                <hr> 
-                            </div>
-                        </div>
-                    </animatable-component>
-                      </div>
-
-                   
-
+                        </animatable-component>
+                    </div>
+                    <!-- / Work Experience -->
                 </div>
+                <!-- / CONTENT - RIGHT -->
             </div>
         </section>
     </section>
 
-    <!-- button print -->
+    <!-- Button Print -->
     <div class="btn-group-fab d-print-none">
         <div>
             <button onclick="window.print()" type="button" class="btn btn-main btn-primary" title="Print">
@@ -388,25 +318,21 @@
         </div>
     </div>
 
-    <!-- button Back  -->
+    <!-- Button Back  -->
     <div class="btn-group-back d-print-none">
         <div>
             <button onclick="location.href='/'" type="button" class="btn btn-main btn-success" title="Back">
                 <i class="bi bi-box-arrow-left fs-3"></i></button>
-            
         </div>
     </div>
 
-    <!-- button Back  -->
+    <!-- Button Edit  -->
     <div class="btn-group-edit d-print-none">
         <div>
-            <button onclick="alert('edit')" type="button" class="btn btn-main btn-warning" title="Back">
+            <button onclick="alert('edit')" type="button" class="btn btn-main btn-warning" title="Edit">
                 <i class="bi bi-pencil-square fs-3"></i></button>
-            
         </div>
     </div>
-    <!-- / cv -->
-
 
     <!-- Bootstrap - jQuery - Plugin - JS Custom-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
