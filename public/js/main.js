@@ -138,3 +138,132 @@ window.scrollReveal = function(t) {
         });
     }
 })(window.jQuery);
+
+// Check localStorage data
+window.onload = (event) => {
+    if (localStorage.getItem("formname") !== null) {
+        document.getElementById('username').innerText = localStorage.getItem("formname")
+        document.getElementById('form-name').value = localStorage.getItem("formname")
+    }
+
+    if (localStorage.getItem("formjob") !== null) {
+        document.getElementById('userjob').innerText = localStorage.getItem("formjob")
+        document.getElementById('form-job').value = localStorage.getItem("formjob")
+    }
+
+    if (localStorage.getItem("formgender") !== null) {
+        document.getElementById('usergender').innerText = localStorage.getItem("formgender")
+        document.getElementById('form-gender').value = localStorage.getItem("formgender")
+    }
+
+    if (localStorage.getItem("formdate") !== null) {
+        document.getElementById('userdate').innerText = localStorage.getItem("formdate")
+        document.getElementById('form-date').value = localStorage.getItem("formdate")
+    }
+
+    if (localStorage.getItem("formphone") !== null) {
+        document.getElementById('userphone').innerText = localStorage.getItem("formphone")
+        document.getElementById('form-phone').value = localStorage.getItem("formphone")
+    }
+
+    if (localStorage.getItem("formaddress") !== null) {
+        document.getElementById('useraddress').innerText = localStorage.getItem("formaddress")
+        document.getElementById('form-address').value = localStorage.getItem("formaddress")
+    }
+
+    if (localStorage.getItem("formemail") !== null) {
+        document.getElementById('useremail').innerText = localStorage.getItem("formemail")
+        document.getElementById('form-email').value = localStorage.getItem("formemail")
+    }
+
+    if (localStorage.getItem("formemail") !== null) {
+        document.getElementById('useremail').innerText = localStorage.getItem("formemail")
+        document.getElementById('form-email').value = localStorage.getItem("formemail")
+    }
+
+    if (localStorage.getItem("formlink") !== null) {
+        document.getElementById('userlink').innerText = localStorage.getItem("formlink")
+        document.getElementById('form-link').value = localStorage.getItem("formlink")
+    }
+
+    if (localStorage.getItem("formhobby") !== null) {
+        document.getElementById('userhobby').innerText = localStorage.getItem("formhobby")
+        document.getElementById('form-hobby').value = localStorage.getItem("formhobby")
+    }
+
+    if (localStorage.getItem("formgoal") !== null) {
+        document.getElementById('usergoal').innerText = localStorage.getItem("formgoal")
+        document.getElementById('form-goal').value = localStorage.getItem("formgoal")
+    }
+
+    if (localStorage.getItem("formabout") !== null) {
+        document.getElementById('userabout').innerText = localStorage.getItem("formabout")
+        document.getElementById('form-about').value = localStorage.getItem("formabout")
+    }
+
+
+};
+
+// Handle Form
+document.getElementById('form').addEventListener('submit', function(e){
+    e.preventDefault();
+    swal({
+        title: "Your CV is already!",
+        icon: "success",
+        buttons: true,
+      })
+      .then((ok) => {
+        if (ok) {
+            window.location.href = '/cv'
+        }
+      });
+   
+    
+    // Form edit
+    var formname = document.getElementById('form-name').value
+    document.getElementById('username').innerText = formname
+    localStorage.setItem("formname", formname);
+
+    var formjob = document.getElementById('form-job').value
+    document.getElementById('userjob').innerText = formjob
+    localStorage.setItem("formjob", formjob);
+
+
+    var e = document.getElementById("form-gender");
+    var formgender = e.options[e.selectedIndex].text;
+    document.getElementById('usergender').innerText = formgender
+    localStorage.setItem("formgender", formgender);
+
+    var formdate = document.getElementById('form-date').value
+    document.getElementById('userdate').innerText = formdate
+    localStorage.setItem("formdate", formdate);
+
+    var formphone = document.getElementById('form-phone').value
+    document.getElementById('userphone').innerText = formphone
+    localStorage.setItem("formphone", formphone);
+
+    var formaddress = document.getElementById('form-address').value
+    document.getElementById('useraddress').innerText = formaddress
+    localStorage.setItem("formaddress", formaddress);
+
+    var formemail = document.getElementById('form-email').value
+    document.getElementById('useremail').innerText = formemail
+    localStorage.setItem("formemail", formemail);
+
+    var formlink = document.getElementById('form-link').value
+    document.getElementById('userlink').innerText = formlink
+    localStorage.setItem("formlink", formlink);
+
+    var formhobby = document.getElementById('form-hobby').value
+    document.getElementById('userhobby').innerText = formhobby
+    localStorage.setItem("formhobby", formhobby);
+
+    var formgoal = document.getElementById('form-goal').value
+    document.getElementById('usergoal').innerText = formgoal
+    localStorage.setItem("formgoal", formgoal);
+
+    var formabout = document.getElementById('form-about').value
+    document.getElementById('userabout').innerText = formabout
+    localStorage.setItem("formabout", formabout);
+
+})

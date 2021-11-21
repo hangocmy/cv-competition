@@ -34,14 +34,14 @@
                 <!-- Họ tên & Job -->
                 <div class="col-8">
                     <animatable-component autoplay animation="slideInUp" easing="ease-in-out" duration="1000">
-                        <h4 class="lastName">
+                        <h4 class="lastName" id="username">
                             MANDARIN
                         </h4>
                         <hr>
                     </animatable-component>
                     <animatable-component autoplay animation="lightSpeedIn" easing="ease-in-out" duration="1800">
                         <p class="jobTitle">
-                            <span class="text-break">
+                            <span class="text-break" id="userjob">
                                 FRONTEND INTERN
                             </span>
                         </p>
@@ -65,7 +65,7 @@
                                             <i class="bi bi-person-fill" role="img" aria-label="Location"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">Nam</p>
+                                            <p class="h6" id="usergender">Nam</p>
                                         </div>
                                     </div>
                                     <!-- Ngày sinh -->
@@ -74,7 +74,7 @@
                                             <i class="bi bi-calendar-check-fill" role="img" aria-label="Location"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">01/01/1990</p>
+                                            <p class="h6" id="userdate">01/01/1990</p>
                                         </div>
                                     </div>
                                     <!-- Số điện thoại -->
@@ -83,7 +83,7 @@
                                             <i class="bi bi-telephone-fill" role="img" aria-label="Telephone"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">0123456789</p>
+                                            <p class="h6" id="userphone">0123456789</p>
                                         </div>
                                     </div>
                                     <!-- Địa chỉ -->
@@ -92,7 +92,7 @@
                                             <i class="bi bi-geo-alt-fill" role="img" aria-label="Location"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">District 7, Ho Chi Minh City</p>
+                                            <p class="h6" id="useraddress">District 7, Ho Chi Minh City</p>
                                         </div>
                                     </div>
                                     <!-- Email -->
@@ -101,16 +101,16 @@
                                             <i class="bi bi-envelope-fill" role="img" aria-label="Email"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">mandarin@gmail.com</p>
+                                            <p class="h6" id="useremail">mandarin@gmail.com</p>
                                         </div>
                                     </div>
                                     <!-- Link -->
                                     <div class="row pt-2">
                                         <div class="col-2 icon">
-                                            <i class="bi bi-link" role="img" aria-label="GitHub"></i>
+                                            <i class="bi bi-link" role="img" aria-label="Link"></i>
                                         </div>
                                         <div class="col-10">
-                                            <a style="text-decoration: none;" href="https://github.com/mandarin" class="h6">github.com/mandarin</a>
+                                            <p class="h6" id="userlink">github.com/mandarin</p>
                                         </div>
                                     </div>
                                 </p>
@@ -157,7 +157,7 @@
                                     <p class="title">Hobby</p>
                                     <ul class="ms-2">
                                         <li class="pb-2" style="font-size: 15px;">
-                                            <p class="h6">Badminton, Read, Sleep,...</p>
+                                            <p class="h6" id="userhobby">Badminton, Read, Sleep,...</p>
                                         </li>
                                     </ul>
                                 </p>
@@ -174,7 +174,7 @@
                                     <p class="title">Goal</p>
                                     <ul class="ms-2">
                                         <li class="pb-2">
-                                            <p class="h6" style="letter-spacing: 0.5px;">Collaborated with the p on teaching methodn-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation</p>
+                                            <p class="h6" id="usergoal" style="letter-spacing: 0.5px;">Collaborated with the p on teaching methodn-making process of the educational area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation</p>
                                         </li>
                                     </ul>
                                 </p>
@@ -200,7 +200,7 @@
                                 <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
                             </div>
                             <div class="col">
-                                <p style="white-space: pre-line;">
+                                <p style="white-space: pre-line;" id="userabout" >
                                     I am a Front End Developer | Working on projects that integrate @KinEcosystem | + 3 years of experience in maintenance Electromechanical | Since 2019 learning software development | experience in HTML, CSS and Angular.
                                 </p>
                             </div>
@@ -340,37 +340,70 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="exampleModalLabel">Form CV</h5>
+          <h5 class="modal-title" id="exampleModalLabel">Curriculum Vitae</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
-        <div class="modal-body modal-body-css">
-            <form class="modal-form">
+        <div class="modal-body modal-body-css ">
+            <form class="modal-form" id="form">
+                <div class="mb-3">
+                    <label for="form-name" class="form-label">Apply Job</label>
+                    <input type="text" class="form-control" id="form-job" placeholder="Apply Job" required>
+                  </div>
                 <h4 class="form-header">Thông tin cá nhân</h4>
                 <div class="mb-3">
                   <label for="form-name" class="form-label">Full Name</label>
-                  <input type="text" class="form-control" id="form-name" placeholder="Full Name">
+                  <input type="text" class="form-control" id="form-name" placeholder="Full Name" required>
                 </div>
+
+                <div class="mb-3">
+                    <label for="form-name" class="form-label">Gender</label>
+                    <select class="form-select" id="form-gender" aria-label="Nam">
+                        <option selected>Chọn giới tính</option>
+                        <option value="Nam">Nam</option>
+                        <option value="Nữ">Nữ</option>
+                    </select>
+                </div>
+
                 <div class="mb-3">
                   <label for="form-date" class="form-label">Birthday</label>
-                  <input type="date" class="form-control" id="form-date" placeholder="Birthday">
+                  <input type="date" class="form-control" id="form-date" placeholder="Birthday" required>
                 </div>
                 <div class="mb-3">
                     <label for="form-phone" class="form-label">Phone Number</label>
-                    <input type="tel" class="form-control" id="form-phone" placeholder="Phone Number">
+                    <input type="tel" class="form-control" id="form-phone" placeholder="Phone Number" required>
                   </div>
                   <div class="mb-3">
                     <label for="form-address" class="form-label">Address</label>
-                    <input type="text" class="form-control" id="form-address" placeholder="Address">
+                    <input type="text" class="form-control" id="form-address" placeholder="Address" required>
                   </div>
                   <div class="mb-3">
                     <label for="form-email" class="form-label">Email</label>
-                    <input type="email" class="form-control" id="form-email" placeholder="Email">
+                    <input type="email" class="form-control" id="form-email" placeholder="Email" required>
                   </div>
                   <div class="mb-3">
-                    <label for="form-git" class="form-label">Github</label>
-                    <input type="text" class="form-control" id="form-git" placeholder="Github">
+                    <label for="form-git" class="form-label">Link (optional)</label>
+                    <input type="text" class="form-control" id="form-link" placeholder="Your personal link: Facebook, Github, Your web link,...">
                   </div>
-                  <h4 class="form-header">Skills</h4>
+
+
+                  <h4 class="form-header">SKILL</h4>
+                    <div class="skill mb-3">
+                        <div class="skill-form mb-3">
+                            <div class="mb-3">
+                                <label for="form-work" class="form-label">Skill name</label>
+                                <input id="form-skillname" type="text" class="form-control" placeholder="Language" aria-label="Recipient's username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="form-achieve" class="form-label">Skill Description</label>
+                                <input id="form-description" type="text" class="form-control" placeholder="Chinese, Korean" aria-label="Recipient's username">
+                            </div>
+                            <span id="button-addon2" style="color: #42dbec;"><i class="bi bi-plus-square-fill"></i> Add more work experience.</span>
+
+                        </div>
+                    </div>
+
+
+                  <!-- <h4 class="form-header">Skills</h4>
                   <div class="mb-3">
                     <label for="form-tinhoc" class="form-label">Tin học</label>
                     <input type="text" class="form-control" id="form-name" placeholder="Word,excel,...">
@@ -386,11 +419,14 @@
                     <div class="mb-3">
                       <label for="form-certificate" class="form-label">Certificate</label>
                       <input type="text" class="form-control" id="form-certificate" placeholder="Certificate">
-                    </div>
+                    </div> -->
+
+
                     <h4 class="form-header"><label for="form-hobby" class="form-label">Hobby</label></h4>
                     <div class="mb-3">
                         <input type="text" class="form-control" id="form-hobby" placeholder="HOBBY">
                     </div>
+
                     <h4 class="form-header"><label for="form-goal" class="form-label">goal</label></h4>
                     <div class="mb-3">
                         <input type="text" class="form-control" id="form-goal" placeholder="Goal">
@@ -399,13 +435,47 @@
                     <div class="mb-3">
                         <input type="text" class="form-control" id="form-about" placeholder="About me">
                     </div>
-                    <h4 class="form-header"><label for="form-education" class="form-label">Education</label></h4>
+
+                    <h4 class="form-header">Education</h4>
+                    <div class="education mb-3">
+                        <div class="education-form mb-3">
+                            <div class="mb-3">
+                                <label for="form-major" class="form-label">Major</label>
+                                <input id="form-major" type="text"  class="form-control" placeholder="Major" aria-label="Recipient's username">
+                            </div>
+
+                            <div class="mb-3">
+                                <label for="form-university" class="form-label">University</label>
+                                <input id="form-university" type="text"  class="form-control" placeholder="University name" aria-label="Recipient's username">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="form-school-time" class="form-label">Năm học</label>
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input id="form-school-time-from" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                                    </div>
+                                    <div class="col-5">
+                                        <input id="form-school-time-to" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            
+                            <span id="button-addon" style="color: #42dbec;"><i class="bi bi-plus-square-fill"></i> Add more work experience.</span>
+
+                        </div>
+
+                    </div>
+                    <!-- <h4 class="form-header"><label for="form-education" class="form-label">Education</label></h4>
                     <div class="education">
                         <div class="input-group mb-3">
                             <input type="text"  class="form-control" placeholder="Education" aria-label="Recipient's username">
                             <button data-placeholder="Education" class="btn btn-outline-secondary" type="button" id="button-addon">Add</button>
                         </div>
-                    </div>
+                    </div> -->
+
                     <h4 class="form-header">Work Experience</h4>
                     <div class="work-experience mb-3">
                         <div class="work-experience-form mb-3">
@@ -413,19 +483,37 @@
                                 <label for="form-work" class="form-label">Nơi làm việc</label>
                                 <input id="form-work" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
                             </div>
+
+                            <div class="mb-3">
+                                <label for="form-job-already" class="form-label">Công việc đảm nhiệm</label>
+                                <input id="form-job-already" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
+                            </div>
+                            
+                            <div class="mb-3">
+                                <label for="form-time-job" class="form-label">Thời gian làm việc</label>
+                                <input id="form-time-job" type="text"  class="form-control" placeholder="Thời gian làm việc" aria-label="Recipient's username">
+                            </div>
+
                             <div class="mb-3">
                                 <label for="form-achieve" class="form-label">Thành tích</label>
                                 <input id="form-achieve" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
                             </div>
-                            <button class="btn btn-outline-secondary btn-lg btn-block" type="button" id="button-addon1">Add</button>
+                            <span id="button-addon1" style="color: #42dbec;"><i class="bi bi-plus-square-fill"></i> Add more work experience.</span>
+
                         </div>
+
                     </div>
+                    
+                    
+                    <button class="btn btn-lg btn-block btn-success" type="submit" id="btn-create">CREATE</button>
+
+
               </form>
         </div>
-        <div class="modal-footer">
+        <!-- <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
           <button type="button" class="btn btn-primary">Save changes</button>
-        </div>
+        </div> -->
       </div>
     </div>
   </div>
@@ -434,6 +522,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <script src="./js/main.js"></script>
     <script src="./js/addon.js"></script>
 </body>
