@@ -110,7 +110,7 @@
                                             <i class="bi bi-link" role="img" aria-label="GitHub"></i>
                                         </div>
                                         <div class="col-10">
-                                            <p class="h6">github.com/mandarin</p>
+                                            <a style="text-decoration: none;" href="https://github.com/mandarin" class="h6">github.com/mandarin</a>
                                         </div>
                                     </div>
                                 </p>
@@ -329,17 +329,113 @@
     <!-- Button Edit  -->
     <div class="btn-group-edit d-print-none">
         <div>
-            <button onclick="alert('edit')" type="button" class="btn btn-main btn-warning" title="Edit">
+            <button  type="button" data-bs-toggle="modal" data-bs-target="#exampleModal" class="btn btn-main btn-warning" title="Edit">
                 <i class="bi bi-pencil-square fs-3"></i></button>
         </div>
     </div>
+
+
+    <!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Form CV</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body modal-body-css">
+            <form class="modal-form">
+                <h4 class="form-header">Thông tin cá nhân</h4>
+                <div class="mb-3">
+                  <label for="form-name" class="form-label">Full Name</label>
+                  <input type="text" class="form-control" id="form-name" placeholder="Full Name">
+                </div>
+                <div class="mb-3">
+                  <label for="form-date" class="form-label">Birthday</label>
+                  <input type="date" class="form-control" id="form-date" placeholder="Birthday">
+                </div>
+                <div class="mb-3">
+                    <label for="form-phone" class="form-label">Phone Number</label>
+                    <input type="tel" class="form-control" id="form-phone" placeholder="Phone Number">
+                  </div>
+                  <div class="mb-3">
+                    <label for="form-address" class="form-label">Address</label>
+                    <input type="text" class="form-control" id="form-address" placeholder="Address">
+                  </div>
+                  <div class="mb-3">
+                    <label for="form-email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="form-email" placeholder="Email">
+                  </div>
+                  <div class="mb-3">
+                    <label for="form-git" class="form-label">Github</label>
+                    <input type="text" class="form-control" id="form-git" placeholder="Github">
+                  </div>
+                  <h4 class="form-header">Skills</h4>
+                  <div class="mb-3">
+                    <label for="form-tinhoc" class="form-label">Tin học</label>
+                    <input type="text" class="form-control" id="form-name" placeholder="Word,excel,...">
+                  </div>
+                  <div class="mb-3">
+                    <label for="form-languages" class="form-label">Ngôn ngữ</label>
+                    <input type="text" class="form-control" id="form-languages" placeholder="Bạn giỏi ngôn ngữ nào?">
+                  </div>
+                  <div class="mb-3">
+                      <label for="form-timeskilling" class="form-label">Kỹ năng quản lý thời gian</label>
+                      <input type="tel" class="form-control" id="form-timeskilling" placeholder="Kỹ năng quản lý thời gian">
+                    </div>
+                    <div class="mb-3">
+                      <label for="form-certificate" class="form-label">Certificate</label>
+                      <input type="text" class="form-control" id="form-certificate" placeholder="Certificate">
+                    </div>
+                    <h4 class="form-header"><label for="form-hobby" class="form-label">Hobby</label></h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="form-hobby" placeholder="HOBBY">
+                    </div>
+                    <h4 class="form-header"><label for="form-goal" class="form-label">goal</label></h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="form-goal" placeholder="Goal">
+                    </div>
+                    <h4 class="form-header"><label for="form-about" class="form-label">about me</label></h4>
+                    <div class="mb-3">
+                        <input type="text" class="form-control" id="form-about" placeholder="About me">
+                    </div>
+                    <h4 class="form-header"><label for="form-education" class="form-label">Education</label></h4>
+                    <div class="education">
+                        <div class="input-group mb-3">
+                            <input type="text"  class="form-control" placeholder="Education" aria-label="Recipient's username">
+                            <button data-placeholder="Education" class="btn btn-outline-secondary" type="button" id="button-addon">Add</button>
+                        </div>
+                    </div>
+                    <h4 class="form-header">Work Experience</h4>
+                    <div class="work-experience mb-3">
+                        <div class="work-experience-form mb-3">
+                            <div class="mb-3">
+                                <label for="form-work" class="form-label">Nơi làm việc</label>
+                                <input id="form-work" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
+                            </div>
+                            <div class="mb-3">
+                                <label for="form-achieve" class="form-label">Thành tích</label>
+                                <input id="form-achieve" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
+                            </div>
+                            <button class="btn btn-outline-secondary btn-lg btn-block" type="button" id="button-addon1">Add</button>
+                        </div>
+                    </div>
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+      </div>
+    </div>
+  </div>
 
     <!-- Bootstrap - jQuery - Plugin - JS Custom-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./js/main.js"></script>
-
+    <script src="./js/addon.js"></script>
 </body>
 
 </html>
