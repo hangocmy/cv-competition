@@ -39,7 +39,7 @@ $(document).ready(function () {
     $(this).parent("div").remove();
   });
 
-
+///////////////////////////////////////////////////////////////////////////////
   // Work experience
 
   var addBtn1 = $("#button-addon1");
@@ -74,29 +74,39 @@ $(document).ready(function () {
       e.preventDefault();
       $(e.target).parent("div").remove();
   })
-});
 
+
+  ///////////////////////////////////////////////////////////////////////////////
 // Skill
 
 var addBtn2= $("#button-addon2");
 var wrapper2 = $(".skill");
-var fielhtml2= `<div class="skill-form mb-3">
-<div class="mb-3">
-    <label for="form-work" class="form-label">Skill name</label>
-    <input id="form-skillname" type="text" class="form-control" placeholder="Language" aria-label="Recipient's username">
-</div>
-<div class="mb-3">
-    <label for="form-achieve" class="form-label">Skill Description</label>
-    <input id="form-description" type="text" class="form-control" placeholder="Chinese, Korean" aria-label="Recipient's username">
-</div>
-<button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
-</div>`
+
+
+skill_id = 2
+
 addBtn2.click((e)=>{
-    wrapper2.append(fielhtml2);
+
+    wrapper2.append(`<div class="skill-form mb-3">
+    <div class="mb-3">
+        <label for="form-work" class="form-label">Skill name</label>
+        <input name="form-skillname` + skill_id + `"  id="form-skillname` + skill_id + `" type="text" class="form-control" placeholder="Language" aria-label="Recipient's username">
+    </div>
+    <div class="mb-3">
+        <label for="form-achieve" class="form-label">Skill Description</label>
+        <input name="form-description` + skill_id + `" id="form-description` + skill_id + `" type="text" class="form-control" placeholder="Chinese, Korean" aria-label="Recipient's username">
+    </div>
+    <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
+    </div>`);
+    skill_id++;
+
 })
 
 wrapper2.on("click",".btn-remove",e=>{
     e.preventDefault();
     $(e.target).parent("div").remove();
 })
+
+
+});
 

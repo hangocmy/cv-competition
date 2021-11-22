@@ -141,6 +141,7 @@ window.scrollReveal = function(t) {
 
 // Check localStorage data
 window.onload = (event) => {
+
     if (localStorage.getItem("formname") !== null) {
         document.getElementById('username').innerText = localStorage.getItem("formname")
         document.getElementById('form-name').value = localStorage.getItem("formname")
@@ -203,6 +204,31 @@ window.onload = (event) => {
 
     if (localStorage.getItem("formava") !== null) {
         document.getElementById('userava').src = `data:image/png;base64,${localStorage.getItem("formava")}`;
+    }
+
+    if (localStorage.getItem("skilldata") !== null) {
+        var skillArr = JSON.parse(localStorage.getItem("skilldata"))
+        var ul = document.getElementById("ul-skill");
+
+       for (var i = 0; i < skillArr.length ; i++) {
+
+    
+        var li = document.createElement("li");
+        li.setAttribute("class", "pb-2");    
+        
+        var p1 = document.createElement("p");
+        var b1 = document.createElement("b");
+        b1.appendChild(document.createTextNode(`${skillArr[i].formSkillname}`));
+        p1.appendChild(b1)
+
+        var p2 = document.createElement("p");
+        p2.setAttribute("class", "h6");    
+        p2.appendChild(document.createTextNode(`${skillArr[i].formDescription}`));
+        
+        li.appendChild(p1);
+        li.appendChild(p2);
+        ul.appendChild(li);
+    }
     }
 
 };
@@ -269,7 +295,33 @@ document.getElementById('form').addEventListener('submit', function(e){
     document.getElementById('userabout').innerText = formabout
     localStorage.setItem("formabout", formabout);
 
- 
+    /////////////////////////
+    var inputFormDiv = document.getElementById('skill-form');
+    var skill_input = inputFormDiv.getElementsByTagName('input').length
+    var ul = document.getElementById("ul-skill");
+    
+    var formSkillNameArr = []
+    for (var i = 1; i <= skill_input/2 ; i++) {
+
+        formSkillNameArr.push({formSkillname: form["form-skillname" + i].value,formDescription: form["form-description" + i].value})
+
+        var li = document.createElement("li");
+        li.setAttribute("class", "pb-2");    
+        
+        var p1 = document.createElement("p");
+        var b1 = document.createElement("b");
+        b1.appendChild(document.createTextNode(`${form["form-skillname" + i].value}`));
+        p1.appendChild(b1)
+
+        var p2 = document.createElement("p");
+        p2.setAttribute("class", "h6");    
+        p2.appendChild(document.createTextNode(`${form["form-description" + i].value}`));
+        
+        li.appendChild(p1);
+        li.appendChild(p2);
+        ul.appendChild(li);
+    }
+    localStorage.setItem('skilldata', JSON.stringify(formSkillNameArr))
 
 })
 
@@ -287,3 +339,5 @@ document.getElementById('form-ava').addEventListener('change', (e)=>{
     
     reader.readAsDataURL(file);
 })
+
+
