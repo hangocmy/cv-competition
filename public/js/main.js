@@ -231,6 +231,144 @@ window.onload = (event) => {
     }
     }
 
+    if (localStorage.getItem("edudata") !== null) {
+        var eduArr = JSON.parse(localStorage.getItem("edudata"))
+        var div_edulist = document.getElementById("edu-list");
+
+        for (var i = 0; i < eduArr.length ; i++) {
+        var divChild = document.createElement("div");
+        divChild.setAttribute("class", "row pb-3");    
+        
+        var p_edu1 = document.createElement("p");
+        var b_edu = document.createElement("b");
+        b_edu.appendChild(document.createTextNode(`${eduArr[i].formMajor}`));
+        p_edu1.appendChild(b_edu)
+
+        var divChildRow = document.createElement("div");
+        divChildRow.setAttribute("class", "row"); 
+
+        var divChildChildCol1 = document.createElement("div");
+        divChildChildCol1.setAttribute("class", "col-8"); 
+        var p_edu2 = document.createElement("p");
+        p_edu2.setAttribute("class", "text-uppercase"); 
+        p_edu2.appendChild(document.createTextNode(`${eduArr[i].formUniversity}`));
+
+        var divChildChildCol2 = document.createElement("div");
+        divChildChildCol2.setAttribute("class", "col-4"); 
+        var p_edu3 = document.createElement("p");
+        p_edu3.appendChild(document.createTextNode(`(${eduArr[i].schoolFrom} - ${eduArr[i].schoolTo})`));
+        
+        
+        divChildChildCol1.appendChild(p_edu2)
+        divChildChildCol2.appendChild(p_edu3)
+        divChildRow.appendChild(divChildChildCol1)
+        divChildRow.appendChild(divChildChildCol2)
+        divChild.appendChild(p_edu1);
+        divChild.appendChild(divChildRow);
+        div_edulist.appendChild(divChild)
+
+       }
+    }
+
+    if (localStorage.getItem("wedata") !== null) {
+        var weArr = JSON.parse(localStorage.getItem("wedata"))
+        var div_welist = document.getElementById("we-list");
+        for (var i = 0; i < weArr.length ; i++) {
+        //     div_welist.innerHTML = `<div class="row">
+        //     <span><b>${weArr[i].formWork}</b></span>
+        //     <p>${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}</p>
+        //     <span class="position-relative mt-3">
+        //         <strong>
+        //             <i class="bi bi-award" style="font-size: 18px;"></i><span>Achievement:</span>
+        //         </strong>
+        //          <span>${weArr[i].formAchieve}</span>
+        //     </span>
+        // </div><hr>` 
+
+
+        var hr = document.createElement("hr");
+
+        var row = document.createElement("div");
+        row.setAttribute("class", "row pb-3"); 
+
+        var span1_row = document.createElement("span");
+        var b_row = document.createElement("b");
+        b_row.appendChild(document.createTextNode(`${weArr[i].formWork}`));
+
+        var p_row = document.createElement("p");
+        p_row.appendChild(document.createTextNode(`${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}`));
+
+        var span2_row = document.createElement("span");
+        span2_row.setAttribute("class", "position-relative mt-3"); 
+
+        var strong_span2 = document.createElement("strong");
+        var span_span2 = document.createElement("span");
+
+        var i_strong = document.createElement("i");
+        i_strong.setAttribute("class", "bi bi-award"); 
+        i_strong.setAttribute("style", "font-size: 18px");
+        span_span2.appendChild(document.createTextNode(`Achievement: ${weArr[i].formAchieve}`));
+
+
+        span1_row.appendChild(b_row)
+
+       
+
+        row.appendChild(span1_row)
+        row.appendChild(p_row)
+        row.appendChild(span2_row)
+
+
+        strong_span2.appendChild(i_strong)
+        span2_row.appendChild(strong_span2)
+        span2_row.appendChild(span_span2)
+
+        div_welist.appendChild(row)
+        div_welist.appendChild(hr)
+
+            // var span1 = document.createElement("span");
+            // var b_we1 = document.createElement("b");
+            // b_we1.appendChild(document.createTextNode(`${weArr[i].formWork}`));
+
+            // var p_we1 = document.createElement("p");
+            // p_we1.appendChild(document.createTextNode(`${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}`));
+
+
+            // var span_we1 = document.createElement("span");
+            // span_we1.setAttribute("class", "position-relative mt-3"); 
+
+            // var strong = document.createElement("strong");
+            // var i = document.createElement("i");
+            // i.setAttribute("class", "bi bi-award"); 
+            // i.setAttribute("style", "font-size: 18px"); 
+
+            // strong.appendChild(i)
+
+            // var span_we2 = document.createElement("span");
+            // span_we2.appendChild(document.createTextNode("Achievement: "));
+            // span_we2.style.fontSize = "18px"
+
+
+            // strong.appendChild(span_we2)
+
+            // var span_ach = document.createElement("span");
+            // span_ach.appendChild(document.createTextNode(`${weArr[i].formAchieve}`));
+            // var hr = document.createElement("hr");
+
+            // span1.appendChild(b_we1)
+            // div_we.appendChild(span1)
+            // span_we1.appendChild(strong)
+            // span_we1.appendChild(span_ach)
+            // div_we.appendChild(p_we1)
+            // div_we.appendChild(span_we1)
+            // div_welist.appendChild(div_we)
+            // div_welist.appendChild(hr)
+
+            
+
+       }    
+    }
+
 };
 
 // Handle Form
@@ -319,11 +457,28 @@ document.getElementById('form').addEventListener('submit', function(e){
             formUniversity: form["form-university" + i].value,
             schoolFrom: form["form-school-time-from" + i].value,
             schoolTo: form["form-school-time-to" + i].value
-
         })
-
     }
     localStorage.setItem('edudata', JSON.stringify(formEduArr))
+
+
+    //Work experience
+    var inputFormDiv = document.getElementById('work-experience-form');
+    var we_input = inputFormDiv.getElementsByTagName('input').length
+    
+    var formWeArr = []
+    for (var i = 1; i <= we_input/5 ; i++) {
+
+        formWeArr.push({
+            formWork: form["form-work" + i].value,
+            formJobAlready: form["form-job-already" + i].value,
+            jobFrom: form["form-time-job-from" + i].value,
+            jobTo: form["form-time-job-to" + i].value,
+            formAchieve: form["form-achieve" + i].value
+
+        })
+    }
+    localStorage.setItem('wedata', JSON.stringify(formWeArr))
 
 })
 

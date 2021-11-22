@@ -42,33 +42,47 @@ $(document).ready(function () {
 
 ///////////////////////////////////////////////////////////////////////////////
   // Work experience
-
+  we_id = 2
   var addBtn1 = $("#button-addon1");
   var wrapper1 = $(".work-experience");
-  var fielhtml1= `<div class="work-experience-form mb-3">
-  <div class="mb-3">
-      <label for="form-work" class="form-label">Nơi làm việc</label>
-      <input id="form-work" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
-  </div>
-
-<div class="mb-3">
-<label for="form-job-already" class="form-label">Công việc đảm nhiệm</label>
-<input id="fform-job-already" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
-</div>
-
-<div class="mb-3">
-<label for="form-time-job" class="form-label">Thời gian làm việc</label>
-<input id="form-time-job" type="text"  class="form-control" placeholder="Thời gian làm việc" aria-label="Recipient's username">
-</div>
-
-  <div class="mb-3">
-      <label for="form-achieve" class="form-label">Thành tích</label>
-      <input id="form-achieve" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
-  </div>
-  <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
-</div>`
   addBtn1.click((e)=>{
-      wrapper1.append(fielhtml1);
+      wrapper1.append(`<div class="work-experience mb-3">
+      <div class="work-experience-form mb-3">
+          <div class="mb-3">
+              <label for="form-work" class="form-label">Nơi làm việc</label>
+              <input id="form-work` + we_id + `" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
+          </div>
+
+          <div class="mb-3">
+              <label for="form-job-already" class="form-label">Công việc đảm nhiệm</label>
+              <input id="form-job-already` + we_id + `" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
+          </div>
+          
+  
+
+          <div class="mb-3">
+              <label for="form-time-job" class="form-label">Thời gian làm việc</label>
+              <div class="row">
+                  <div class="col-5">
+                      <input id="form-time-job-from` + we_id + `" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                  </div>
+                  <div class="col-5">
+                      <input id="form-time-job-to` + we_id + `" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                  </div>
+              </div>
+
+          </div>
+
+          <div class="mb-3">
+              <label for="form-achieve" class="form-label">Thành tích</label>
+              <input id="form-achieve` + we_id + `" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
+          </div>
+          <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
+
+      </div>
+
+  </div>`);
+    we_id++
   })
 
   wrapper1.on("click",".btn-remove",e=>{

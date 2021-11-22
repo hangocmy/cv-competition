@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <section class="cv container">
+    <section class="cv ">
         <header>
             <div class="row">
                 <!-- Avatar -->
@@ -220,28 +220,22 @@
                                 <div class="col-auto ">
                                     <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
                                 </div>
-                                <div class="col record edu-list">
-                                    <div class="row">
+                                <div class="col record edu-list" id="edu-list">
+                                    <!-- <div class="row">
                                         <p>
                                             <b>Bachelor of Laws</b>
                                         </p>
-                                        <p>OPEN UNIVERSITY HCMC</p>
-                                        <p>2018-2022</p>
-                                    </div>
-                                    <div class="row">
-                                        <p>
-                                            <b>Bachelor of Software Engineering</b>
-                                        </p>
-                                        <p>TON DUC THANG UNIVERSITY</p>
-                                        <p>2018-2022</p>
-                                    </div>
-                                    <div class="row">
-                                        <p>
-                                            <b>Bachelor of Software Engineering</b>
-                                        </p>
-                                        <p>TON DUC THANG UNIVERSITY</p>
-                                        <p>2018-2022</p>
-                                    </div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <p>OPEN UNIVERSITY HCMC</p>
+
+                                            </div>
+                                            <div class="col-4">
+                                                <p>(2018-2022)</p>
+
+                                            </div>
+                                        </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </animatable-component>
@@ -260,18 +254,26 @@
                                 <div class="col-auto ">
                                     <i class="bi bi-record-circle" style="color: #a5dfe5;"></i>
                                 </div>
-                                <div class="col record">
-                                    <!-- Work 1 -->
-                                    <div class="row">
+                                <div class="col record" id="we-list">
+                                     <!-- Work 1 -->
+
+                                    <!-- <div class="row">
                                         <span><b>VNG Corporation, Ho Chi Minh City</b></span>
-                                        <p>Front-end Developer&nbsp;|&nbsp;2018 - 2019</p>
-                                        <p class="position-relative">
-                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> Collaborated with the development team of the educational area of the foundation,I trained volunteers to play their role as mentors
-                                            within the teaching program at the foundation
-                                        </p>
-                                    </div>
-                                    <!-- Work 2 -->
-                                    <hr>
+                                        
+                                        <p>Front-end Developer | 2018 - 2019</p>
+                                        
+                                        <span class="position-relative mt-3">
+                                            <strong>
+                                                <i class="bi bi-award" style="font-size: 18px;"></i><span>Achievement:</span>
+                                            </strong>
+                                             <span>Collaborated with the development team of the educational area of the foundation,I trained volunteers to play their role as mentors
+                                            within the teaching program at the foundation</span>
+                                        </span>
+                                    </div> -->
+                                    <!-- <hr> -->
+
+                                      <!--Work 2
+
                                     <div class="row">
                                         <span><b>GAMELOFT, Ho Chi Minh City</b><span>
                                         <p>Front-end Developer&nbsp;|&nbsp;2018 - 2019</p>
@@ -279,8 +281,8 @@
                                             <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> Area of the foundation,I trained volunteers to play their role as mentors within the teaching program at the foundation
                                         </p>
                                     </div>
-                                    <hr>
-                                    <!-- Work 3 -->
+                                    <hr> -->
+                                    <!-- Work 3 
                                     <div class="row mt-4">
                                         <span><b>VNG, Ho Chi Minh City</b><span>
                                         <p>Front-end Developer&nbsp;|&nbsp;2019 - 2020</p>
@@ -288,16 +290,8 @@
                                             <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> I learned about: HTML, CSS, Javascript. I participated in the experience of a real project being conducted.
                                         </p>
                                     </div>
-                                    <hr>
-                                    <!-- Work TEST -->
-                                    <div class="row mt-4">
-                                        <span><b>VNG, Ho Chi Minh City</b><span>
-                                        <p>Front-end Developer&nbsp;|&nbsp;2019 - 2020</p>
-                                        <p class="position-relative">
-                                            <strong><i class="bi bi-award" style="font-size: 18px;"></i>Achievement:</strong> I learned about: HTML, CSS, Javascript. I participated in the experience of a real project being conducted.
-                                        </p>
-                                    </div>
-                                    <hr>                                    
+                                    <hr> -->
+                                                                    
                                 </div>
                             </div>
                         </animatable-component>
@@ -313,7 +307,7 @@
     <div class="btn-group-fab d-print-none">
         <div>
             <button onclick="window.print()" type="button" class="btn btn-main btn-primary" title="Print">
-            <i class="bi bi-printer fs-3"></i>
+            <i class="bi bi-folder fs-3"></i>
             </button>
         </div>
     </div>
@@ -482,26 +476,36 @@
                     </div> -->
 
                     <h4 class="form-header">Work Experience</h4>
-                    <div class="work-experience mb-3">
+                    <div class="work-experience mb-3" id="work-experience-form">
                         <div class="work-experience-form mb-3">
                             <div class="mb-3">
                                 <label for="form-work" class="form-label">Nơi làm việc</label>
-                                <input id="form-work" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
+                                <input id="form-work1" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
                             </div>
 
                             <div class="mb-3">
                                 <label for="form-job-already" class="form-label">Công việc đảm nhiệm</label>
-                                <input id="form-job-already" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
+                                <input id="form-job-already1" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
                             </div>
                             
+                    
+
                             <div class="mb-3">
                                 <label for="form-time-job" class="form-label">Thời gian làm việc</label>
-                                <input id="form-time-job" type="text"  class="form-control" placeholder="Thời gian làm việc" aria-label="Recipient's username">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <input id="form-time-job-from1" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                                    </div>
+                                    <div class="col-5">
+                                        <input id="form-time-job-to1" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                                    </div>
+                                </div>
+
                             </div>
 
                             <div class="mb-3">
                                 <label for="form-achieve" class="form-label">Thành tích</label>
-                                <input id="form-achieve" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
+                                <input id="form-achieve1" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
                             </div>
                             <span id="button-addon1" style="color: #42dbec;"><i class="bi bi-plus-square-fill"></i> Add more work experience.</span>
 
