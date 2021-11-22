@@ -1,37 +1,38 @@
 $(document).ready(function () {
   // Education
+  edu_id = 2
   var addBtn = $("#button-addon");
   var wrapper = $(".education");
 
   addBtn.on("click", (e) => {
-    var fieldhtml = `<div class="education-form mb-3">
+    wrapper.append(`<div class="education-form mb-3">
     <div class="mb-3">
-    <label for="form-major" class="form-label">Major</label>
-    <input id="form-major" type="text"  class="form-control" placeholder="Major" aria-label="Recipient's username">
-</div>
-
-<div class="mb-3">
-    <label for="form-university" class="form-label">University</label>
-    <input id="form-university" type="text"  class="form-control" placeholder="University name" aria-label="Recipient's username">
-</div>
-
-<div class="mb-3">
-    <label for="form-school-time" class="form-label">Năm học</label>
-    <div class="row">
-        <div class="col-5">
-            <input id="form-school-time-from" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+            <label for="form-major" class="form-label">Major</label>
+            <input name="form-major` + edu_id + `" id="form-major` + edu_id + `" type="text"  class="form-control" placeholder="Major" aria-label="Recipient's username">
         </div>
-        <div class="col-5">
-            <input id="form-school-time-to" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+
+        <div class="mb-3">
+            <label for="form-university" class="form-label">University</label>
+            <input name="form-university` + edu_id + `" id="form-university` + edu_id + `" type="text"  class="form-control" placeholder="University name" aria-label="Recipient's username">
         </div>
-    </div>
+        
+        <div class="mb-3">
+            <label for="form-school-time" class="form-label">Năm học</label>
+            <div class="row">
+                <div class="col-5">
+                    <input name="form-school-time-from` + edu_id + `" id="form-school-time-from` + edu_id + `" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                </div>
+                <div class="col-5">
+                    <input name="form-school-time-to` + edu_id + `" id="form-school-time-to` + edu_id + `" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                </div>
+            </div>
 
-</div>
-<button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
-</div>
+        </div>
+        <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
+        </div>
 
-`;
-    wrapper.append(fieldhtml);
+        `);
+    edu_id++
   });
 
   wrapper.on("click", ".btn-remove", function (e) {

@@ -295,33 +295,35 @@ document.getElementById('form').addEventListener('submit', function(e){
     document.getElementById('userabout').innerText = formabout
     localStorage.setItem("formabout", formabout);
 
-    /////////////////////////
+    //Skill
     var inputFormDiv = document.getElementById('skill-form');
     var skill_input = inputFormDiv.getElementsByTagName('input').length
-    var ul = document.getElementById("ul-skill");
     
     var formSkillNameArr = []
     for (var i = 1; i <= skill_input/2 ; i++) {
 
         formSkillNameArr.push({formSkillname: form["form-skillname" + i].value,formDescription: form["form-description" + i].value})
-
-        var li = document.createElement("li");
-        li.setAttribute("class", "pb-2");    
-        
-        var p1 = document.createElement("p");
-        var b1 = document.createElement("b");
-        b1.appendChild(document.createTextNode(`${form["form-skillname" + i].value}`));
-        p1.appendChild(b1)
-
-        var p2 = document.createElement("p");
-        p2.setAttribute("class", "h6");    
-        p2.appendChild(document.createTextNode(`${form["form-description" + i].value}`));
-        
-        li.appendChild(p1);
-        li.appendChild(p2);
-        ul.appendChild(li);
     }
     localStorage.setItem('skilldata', JSON.stringify(formSkillNameArr))
+
+
+    //Education
+    var inputFormDiv = document.getElementById('education-form');
+    var edu_input = inputFormDiv.getElementsByTagName('input').length
+    
+    var formEduArr = []
+    for (var i = 1; i <= edu_input/4 ; i++) {
+
+        formEduArr.push({
+            formMajor: form["form-major" + i].value,
+            formUniversity: form["form-university" + i].value,
+            schoolFrom: form["form-school-time-from" + i].value,
+            schoolTo: form["form-school-time-to" + i].value
+
+        })
+
+    }
+    localStorage.setItem('edudata', JSON.stringify(formEduArr))
 
 })
 
