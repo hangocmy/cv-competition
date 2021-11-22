@@ -201,6 +201,9 @@ window.onload = (event) => {
         document.getElementById('form-about').value = localStorage.getItem("formabout")
     }
 
+    if (localStorage.getItem("formava") !== null) {
+        document.getElementById('userava').src = `data:image/png;base64,${localStorage.getItem("formava")}`;
+    }
 
 };
 
@@ -266,4 +269,21 @@ document.getElementById('form').addEventListener('submit', function(e){
     document.getElementById('userabout').innerText = formabout
     localStorage.setItem("formabout", formabout);
 
+ 
+
+})
+
+
+// Save image to localStorage
+document.getElementById('form-ava').addEventListener('change', (e)=>{
+    const file = e.target.files[0];
+    const reader = new FileReader();
+
+    reader.onloadend = () => {
+    const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
+    localStorage.setItem('formava', base64String);
+    document.getElementById('userava').src = `data:image/png;base64,${base64String}`
+    };
+    
+    reader.readAsDataURL(file);
 })
