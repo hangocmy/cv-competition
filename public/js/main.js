@@ -247,22 +247,19 @@ window.onload = (event) => {
         var divChildRow = document.createElement("div");
         divChildRow.setAttribute("class", "row"); 
 
-        var divChildChildCol1 = document.createElement("div");
-        divChildChildCol1.setAttribute("class", "col-8"); 
+        
         var p_edu2 = document.createElement("p");
         p_edu2.setAttribute("class", "text-uppercase"); 
         p_edu2.appendChild(document.createTextNode(`${eduArr[i].formUniversity}`));
 
-        var divChildChildCol2 = document.createElement("div");
-        divChildChildCol2.setAttribute("class", "col-4"); 
+       
         var p_edu3 = document.createElement("p");
         p_edu3.appendChild(document.createTextNode(`(${eduArr[i].schoolFrom} - ${eduArr[i].schoolTo})`));
         
         
-        divChildChildCol1.appendChild(p_edu2)
-        divChildChildCol2.appendChild(p_edu3)
-        divChildRow.appendChild(divChildChildCol1)
-        divChildRow.appendChild(divChildChildCol2)
+        
+        divChildRow.appendChild(p_edu2)
+        divChildRow.appendChild(p_edu3)
         divChild.appendChild(p_edu1);
         divChild.appendChild(divChildRow);
         div_edulist.appendChild(divChild)
@@ -274,17 +271,6 @@ window.onload = (event) => {
         var weArr = JSON.parse(localStorage.getItem("wedata"))
         var div_welist = document.getElementById("we-list");
         for (var i = 0; i < weArr.length ; i++) {
-        //     div_welist.innerHTML = `<div class="row">
-        //     <span><b>${weArr[i].formWork}</b></span>
-        //     <p>${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}</p>
-        //     <span class="position-relative mt-3">
-        //         <strong>
-        //             <i class="bi bi-award" style="font-size: 18px;"></i><span>Achievement:</span>
-        //         </strong>
-        //          <span>${weArr[i].formAchieve}</span>
-        //     </span>
-        // </div><hr>` 
-
 
         var hr = document.createElement("hr");
 
@@ -326,45 +312,7 @@ window.onload = (event) => {
         div_welist.appendChild(row)
         div_welist.appendChild(hr)
 
-            // var span1 = document.createElement("span");
-            // var b_we1 = document.createElement("b");
-            // b_we1.appendChild(document.createTextNode(`${weArr[i].formWork}`));
-
-            // var p_we1 = document.createElement("p");
-            // p_we1.appendChild(document.createTextNode(`${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}`));
-
-
-            // var span_we1 = document.createElement("span");
-            // span_we1.setAttribute("class", "position-relative mt-3"); 
-
-            // var strong = document.createElement("strong");
-            // var i = document.createElement("i");
-            // i.setAttribute("class", "bi bi-award"); 
-            // i.setAttribute("style", "font-size: 18px"); 
-
-            // strong.appendChild(i)
-
-            // var span_we2 = document.createElement("span");
-            // span_we2.appendChild(document.createTextNode("Achievement: "));
-            // span_we2.style.fontSize = "18px"
-
-
-            // strong.appendChild(span_we2)
-
-            // var span_ach = document.createElement("span");
-            // span_ach.appendChild(document.createTextNode(`${weArr[i].formAchieve}`));
-            // var hr = document.createElement("hr");
-
-            // span1.appendChild(b_we1)
-            // div_we.appendChild(span1)
-            // span_we1.appendChild(strong)
-            // span_we1.appendChild(span_ach)
-            // div_we.appendChild(p_we1)
-            // div_we.appendChild(span_we1)
-            // div_welist.appendChild(div_we)
-            // div_welist.appendChild(hr)
-
-            
+           
 
        }    
     }
