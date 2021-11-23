@@ -1,11 +1,11 @@
-$(document).ready(function () {
-  // Education
-  edu_id = 2
-  var addBtn = $("#button-addon");
-  var wrapper = $(".education");
+$(document).ready(function() {
+    // Education
+    edu_id = 2
+    var addBtn = $("#button-addon");
+    var wrapper = $(".education");
 
-  addBtn.on("click", (e) => {
-    wrapper.append(`<div class="education-form mb-3">
+    addBtn.on("click", (e) => {
+        wrapper.append(`<div class="education-form mb-3">
     <div class="mb-3">
             <label for="form-major" class="form-label">Major</label>
             <input name="form-major` + edu_id + `" id="form-major` + edu_id + `" type="text"  class="form-control" placeholder="Major" aria-label="Recipient's username">
@@ -32,21 +32,21 @@ $(document).ready(function () {
         </div>
 
         `);
-    edu_id++
-  });
+        edu_id++
+    });
 
-  wrapper.on("click", ".btn-remove", function (e) {
-    e.preventDefault();
-    $(this).parent("div").remove();
-  });
+    wrapper.on("click", ".btn-remove", function(e) {
+        e.preventDefault();
+        $(this).parent("div").remove();
+    });
 
-///////////////////////////////////////////////////////////////////////////////
-  // Work experience
-  we_id = 2
-  var addBtn1 = $("#button-addon1");
-  var wrapper1 = $(".work-experience");
-  addBtn1.click((e)=>{
-      wrapper1.append(`<div class="work-experience mb-3">
+    ///////////////////////////////////////////////////////////////////////////////
+    // Work experience
+    we_id = 2
+    var addBtn1 = $("#button-addon1");
+    var wrapper1 = $(".work-experience");
+    addBtn1.click((e) => {
+        wrapper1.append(`<div class="work-experience mb-3">
       <div class="work-experience-form mb-3">
           <div class="mb-3">
               <label for="form-work" class="form-label">Nơi làm việc</label>
@@ -82,27 +82,27 @@ $(document).ready(function () {
       </div>
 
   </div>`);
-    we_id++
-  })
+        we_id++
+    })
 
-  wrapper1.on("click",".btn-remove",e=>{
-      e.preventDefault();
-      $(e.target).parent("div").remove();
-  })
-
-
-  ///////////////////////////////////////////////////////////////////////////////
-// Skill
-
-var addBtn2= $("#button-addon2");
-var wrapper2 = $(".skill");
+    wrapper1.on("click", ".btn-remove", e => {
+        e.preventDefault();
+        $(e.target).parent("div").remove();
+    })
 
 
-skill_id = 2
+    ///////////////////////////////////////////////////////////////////////////////
+    // Skill
 
-addBtn2.click((e)=>{
+    var addBtn2 = $("#button-addon2");
+    var wrapper2 = $(".skill");
 
-    wrapper2.append(`<div class="skill-form mb-3">
+
+    skill_id = 2
+
+    addBtn2.click((e) => {
+
+        wrapper2.append(`<div class="skill-form mb-3">
     <div class="mb-3">
         <label for="form-work" class="form-label">Skill name</label>
         <input name="form-skillname` + skill_id + `"  id="form-skillname` + skill_id + `" type="text" class="form-control" placeholder="Language" aria-label="Recipient's username">
@@ -113,15 +113,14 @@ addBtn2.click((e)=>{
     </div>
     <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
     </div>`);
-    skill_id++;
+        skill_id++;
 
-})
+    })
 
-wrapper2.on("click",".btn-remove",e=>{
-    e.preventDefault();
-    $(e.target).parent("div").remove();
-})
+    wrapper2.on("click", ".btn-remove", e => {
+        e.preventDefault();
+        $(e.target).parent("div").remove();
+    })
 
 
 });
-
