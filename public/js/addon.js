@@ -17,13 +17,13 @@ $(document).ready(function() {
         </div>
         
         <div class="mb-3">
-            <label for="form-school-time" class="form-label">Năm học</label>
+            <label for="form-school-time" class="form-label">Year</label>
             <div class="row">
                 <div class="col-5">
-                    <input name="form-school-time-from` + edu_id + `" id="form-school-time-from` + edu_id + `" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                    <input name="form-school-time-from` + edu_id + `" id="form-school-time-from` + edu_id + `" type="text"  class="form-control" placeholder="Start" >
                 </div>
                 <div class="col-5">
-                    <input name="form-school-time-to` + edu_id + `" id="form-school-time-to` + edu_id + `" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                    <input name="form-school-time-to` + edu_id + `" id="form-school-time-to` + edu_id + `" type="text"  class="form-control" placeholder="End" >
                 </div>
             </div>
 
@@ -49,33 +49,33 @@ $(document).ready(function() {
         wrapper1.append(`<div class="work-experience mb-3">
       <div class="work-experience-form mb-3">
           <div class="mb-3">
-              <label for="form-work" class="form-label">Nơi làm việc</label>
-              <input id="form-work` + we_id + `" type="text"  class="form-control" placeholder="Nơi làm việc" aria-label="Recipient's username">
+              <label for="form-work" class="form-label">Company</label>
+              <input id="form-work` + we_id + `" type="text"  class="form-control" placeholder="Enter company name" aria-label="Recipient's username">
           </div>
 
           <div class="mb-3">
-              <label for="form-job-already" class="form-label">Công việc đảm nhiệm</label>
-              <input id="form-job-already` + we_id + `" type="text"  class="form-control" placeholder="Công việc đảm nhiệm" aria-label="Recipient's username">
+              <label for="form-job-already" class="form-label">Role</label>
+              <input id="form-job-already` + we_id + `" type="text"  class="form-control" placeholder="Enter your role" aria-label="Recipient's username">
           </div>
           
   
 
           <div class="mb-3">
-              <label for="form-time-job" class="form-label">Thời gian làm việc</label>
+              <label for="form-time-job" class="form-label">Year</label>
               <div class="row">
                   <div class="col-5">
-                      <input id="form-time-job-from` + we_id + `" type="text"  class="form-control" placeholder="Thời gian bắt đầu" >
+                      <input id="form-time-job-from` + we_id + `" type="text"  class="form-control" placeholder="Start" >
                   </div>
                   <div class="col-5">
-                      <input id="form-time-job-to` + we_id + `" type="text"  class="form-control" placeholder="Thời gian kết thúc" >
+                      <input id="form-time-job-to` + we_id + `" type="text"  class="form-control" placeholder="End" >
                   </div>
               </div>
 
           </div>
 
           <div class="mb-3">
-              <label for="form-achieve" class="form-label">Thành tích</label>
-              <input id="form-achieve` + we_id + `" type="text"  class="form-control" placeholder="Thành tích" aria-label="Recipient's username">
+              <label for="form-achieve" class="form-label">Achievement</label>
+              <input id="form-achieve` + we_id + `" type="text"  class="form-control" placeholder="Enter your achievement" aria-label="Recipient's username">
           </div>
           <button class="btn btn-outline-secondary btn-lg btn-block btn-remove" type="button">Remove</button>
 

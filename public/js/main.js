@@ -329,8 +329,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
         })
         .then((ok) => {
             if (ok) {
-                //!!! Đổi từ /cv sang cv.html!!!
-                window.location.href = 'cv.html'
+                //!!! Đổi từ /cv sang cv!!!
+                window.location.href = 'cv'
             }
         });
 
