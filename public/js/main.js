@@ -329,7 +329,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
         })
         .then((ok) => {
             if (ok) {
-                window.location.href = '/cv.html'
+                window.location.href = 'https://hangocmy.github.io/cv-competition/cv.html'
             }
         });
 
