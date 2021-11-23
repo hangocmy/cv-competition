@@ -210,130 +210,130 @@ window.onload = (event) => {
         var skillArr = JSON.parse(localStorage.getItem("skilldata"))
         var ul = document.getElementById("ul-skill");
 
-       for (var i = 0; i < skillArr.length ; i++) {
+        for (var i = 0; i < skillArr.length; i++) {
 
-    
-        var li = document.createElement("li");
-        li.setAttribute("class", "pb-2");    
-        
-        var p1 = document.createElement("p");
-        var b1 = document.createElement("b");
-        b1.appendChild(document.createTextNode(`${skillArr[i].formSkillname}`));
-        p1.appendChild(b1)
 
-        var p2 = document.createElement("p");
-        p2.setAttribute("class", "h6");    
-        p2.appendChild(document.createTextNode(`${skillArr[i].formDescription}`));
-        
-        li.appendChild(p1);
-        li.appendChild(p2);
-        ul.appendChild(li);
-    }
+            var li = document.createElement("li");
+            li.setAttribute("class", "pb-2");
+
+            var p1 = document.createElement("p");
+            var b1 = document.createElement("b");
+            b1.appendChild(document.createTextNode(`${skillArr[i].formSkillname}`));
+            p1.appendChild(b1)
+
+            var p2 = document.createElement("p");
+            p2.setAttribute("class", "h6");
+            p2.appendChild(document.createTextNode(`${skillArr[i].formDescription}`));
+
+            li.appendChild(p1);
+            li.appendChild(p2);
+            ul.appendChild(li);
+        }
     }
 
     if (localStorage.getItem("edudata") !== null) {
         var eduArr = JSON.parse(localStorage.getItem("edudata"))
         var div_edulist = document.getElementById("edu-list");
 
-        for (var i = 0; i < eduArr.length ; i++) {
-        var divChild = document.createElement("div");
-        divChild.setAttribute("class", "row pb-3");    
-        
-        var p_edu1 = document.createElement("p");
-        var b_edu = document.createElement("b");
-        b_edu.appendChild(document.createTextNode(`${eduArr[i].formMajor}`));
-        p_edu1.appendChild(b_edu)
+        for (var i = 0; i < eduArr.length; i++) {
+            var divChild = document.createElement("div");
+            divChild.setAttribute("class", "row pb-3");
 
-        var divChildRow = document.createElement("div");
-        divChildRow.setAttribute("class", "row"); 
+            var p_edu1 = document.createElement("p");
+            var b_edu = document.createElement("b");
+            b_edu.appendChild(document.createTextNode(`${eduArr[i].formMajor}`));
+            p_edu1.appendChild(b_edu)
 
-        
-        var p_edu2 = document.createElement("p");
-        p_edu2.setAttribute("class", "text-uppercase"); 
-        p_edu2.appendChild(document.createTextNode(`${eduArr[i].formUniversity}`));
+            var divChildRow = document.createElement("div");
+            divChildRow.setAttribute("class", "row");
 
-       
-        var p_edu3 = document.createElement("p");
-        p_edu3.appendChild(document.createTextNode(`(${eduArr[i].schoolFrom} - ${eduArr[i].schoolTo})`));
-        
-        
-        
-        divChildRow.appendChild(p_edu2)
-        divChildRow.appendChild(p_edu3)
-        divChild.appendChild(p_edu1);
-        divChild.appendChild(divChildRow);
-        div_edulist.appendChild(divChild)
 
-       }
+            var p_edu2 = document.createElement("p");
+            p_edu2.setAttribute("class", "text-uppercase");
+            p_edu2.appendChild(document.createTextNode(`${eduArr[i].formUniversity}`));
+
+
+            var p_edu3 = document.createElement("p");
+            p_edu3.appendChild(document.createTextNode(`(${eduArr[i].schoolFrom} - ${eduArr[i].schoolTo})`));
+
+
+
+            divChildRow.appendChild(p_edu2)
+            divChildRow.appendChild(p_edu3)
+            divChild.appendChild(p_edu1);
+            divChild.appendChild(divChildRow);
+            div_edulist.appendChild(divChild)
+
+        }
     }
 
     if (localStorage.getItem("wedata") !== null) {
         var weArr = JSON.parse(localStorage.getItem("wedata"))
         var div_welist = document.getElementById("we-list");
-        for (var i = 0; i < weArr.length ; i++) {
+        for (var i = 0; i < weArr.length; i++) {
 
-        var hr = document.createElement("hr");
+            var hr = document.createElement("hr");
 
-        var row = document.createElement("div");
-        row.setAttribute("class", "row pb-3"); 
+            var row = document.createElement("div");
+            row.setAttribute("class", "row pb-3");
 
-        var span1_row = document.createElement("span");
-        var b_row = document.createElement("b");
-        b_row.appendChild(document.createTextNode(`${weArr[i].formWork}`));
+            var span1_row = document.createElement("span");
+            var b_row = document.createElement("b");
+            b_row.appendChild(document.createTextNode(`${weArr[i].formWork}`));
 
-        var p_row = document.createElement("p");
-        p_row.appendChild(document.createTextNode(`${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}`));
+            var p_row = document.createElement("p");
+            p_row.appendChild(document.createTextNode(`${weArr[i].formJobAlready} | ${weArr[i].jobFrom} - ${weArr[i].jobTo}`));
 
-        var span2_row = document.createElement("span");
-        span2_row.setAttribute("class", "position-relative mt-3"); 
+            var span2_row = document.createElement("span");
+            span2_row.setAttribute("class", "position-relative mt-3");
 
-        var strong_span2 = document.createElement("strong");
-        var span_span2 = document.createElement("span");
+            var strong_span2 = document.createElement("strong");
+            var span_span2 = document.createElement("span");
 
-        var i_strong = document.createElement("i");
-        i_strong.setAttribute("class", "bi bi-award"); 
-        i_strong.setAttribute("style", "font-size: 18px");
-        span_span2.appendChild(document.createTextNode(`Achievement: ${weArr[i].formAchieve}`));
-
-
-        span1_row.appendChild(b_row)
-
-       
-
-        row.appendChild(span1_row)
-        row.appendChild(p_row)
-        row.appendChild(span2_row)
+            var i_strong = document.createElement("i");
+            i_strong.setAttribute("class", "bi bi-award");
+            i_strong.setAttribute("style", "font-size: 18px");
+            span_span2.appendChild(document.createTextNode(`Achievement: ${weArr[i].formAchieve}`));
 
 
-        strong_span2.appendChild(i_strong)
-        span2_row.appendChild(strong_span2)
-        span2_row.appendChild(span_span2)
+            span1_row.appendChild(b_row)
 
-        div_welist.appendChild(row)
-        div_welist.appendChild(hr)
 
-           
 
-       }    
+            row.appendChild(span1_row)
+            row.appendChild(p_row)
+            row.appendChild(span2_row)
+
+
+            strong_span2.appendChild(i_strong)
+            span2_row.appendChild(strong_span2)
+            span2_row.appendChild(span_span2)
+
+            div_welist.appendChild(row)
+            div_welist.appendChild(hr)
+
+
+
+        }
     }
 
 };
 
 // Handle Form
-document.getElementById('form').addEventListener('submit', function(e){
+document.getElementById('form').addEventListener('submit', function(e) {
     e.preventDefault();
     swal({
-        title: "Your CV is already!",
-        icon: "success",
-        buttons: true,
-      })
-      .then((ok) => {
-        if (ok) {
-            window.location.href = '/cv'
-        }
-      });
-   
-    
+            title: "Your CV is already!",
+            icon: "success",
+            buttons: true,
+        })
+        .then((ok) => {
+            if (ok) {
+                window.location.href = 'cv'
+            }
+        });
+
+
     // Form edit
     var formname = document.getElementById('form-name').value
     document.getElementById('username').innerText = formname
@@ -384,11 +384,11 @@ document.getElementById('form').addEventListener('submit', function(e){
     //Skill
     var inputFormDiv = document.getElementById('skill-form');
     var skill_input = inputFormDiv.getElementsByTagName('input').length
-    
-    var formSkillNameArr = []
-    for (var i = 1; i <= skill_input/2 ; i++) {
 
-        formSkillNameArr.push({formSkillname: form["form-skillname" + i].value,formDescription: form["form-description" + i].value})
+    var formSkillNameArr = []
+    for (var i = 1; i <= skill_input / 2; i++) {
+
+        formSkillNameArr.push({ formSkillname: form["form-skillname" + i].value, formDescription: form["form-description" + i].value })
     }
     localStorage.setItem('skilldata', JSON.stringify(formSkillNameArr))
 
@@ -396,9 +396,9 @@ document.getElementById('form').addEventListener('submit', function(e){
     //Education
     var inputFormDiv = document.getElementById('education-form');
     var edu_input = inputFormDiv.getElementsByTagName('input').length
-    
+
     var formEduArr = []
-    for (var i = 1; i <= edu_input/4 ; i++) {
+    for (var i = 1; i <= edu_input / 4; i++) {
 
         formEduArr.push({
             formMajor: form["form-major" + i].value,
@@ -413,9 +413,9 @@ document.getElementById('form').addEventListener('submit', function(e){
     //Work experience
     var inputFormDiv = document.getElementById('work-experience-form');
     var we_input = inputFormDiv.getElementsByTagName('input').length
-    
+
     var formWeArr = []
-    for (var i = 1; i <= we_input/5 ; i++) {
+    for (var i = 1; i <= we_input / 5; i++) {
 
         formWeArr.push({
             formWork: form["form-work" + i].value,
@@ -432,17 +432,15 @@ document.getElementById('form').addEventListener('submit', function(e){
 
 
 // Save image to localStorage
-document.getElementById('form-ava').addEventListener('change', (e)=>{
+document.getElementById('form-ava').addEventListener('change', (e) => {
     const file = e.target.files[0];
     const reader = new FileReader();
 
     reader.onloadend = () => {
-    const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
-    localStorage.setItem('formava', base64String);
-    document.getElementById('userava').src = `data:image/png;base64,${base64String}`
+        const base64String = reader.result.replace('data:', '').replace(/^.+,/, '');
+        localStorage.setItem('formava', base64String);
+        document.getElementById('userava').src = `data:image/png;base64,${base64String}`
     };
-    
+
     reader.readAsDataURL(file);
 })
-
-
