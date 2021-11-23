@@ -329,7 +329,8 @@ document.getElementById('form').addEventListener('submit', function(e) {
         })
         .then((ok) => {
             if (ok) {
-                window.location.href = 'https://hangocmy.github.io/cv-competition/cv.html'
+                //!!! Đổi từ /cv sang cv!!!
+                window.location.href = 'cv'
             }
         });
 
