@@ -329,7 +329,7 @@ document.getElementById('form').addEventListener('submit', function(e) {
         })
         .then((ok) => {
             if (ok) {
-                window.location.href = 'cv-competition'
+                window.location.href = 'cv.html'
             }
         });
 
